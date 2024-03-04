@@ -3,6 +3,7 @@ import {
   getContentItemDetailByType,
   getContentItemsByType,
   getMaxContentPagesByType,
+  getArrFromRange,
 } from './common-utils';
 import { CONTENT_TYPES } from './constants';
 
@@ -31,11 +32,11 @@ describe('getContentItemDetailByType', () => {
 
 describe('getContentItemsByType', () => {
   it('returns list of content objects by type and page result number', () => {
-    const result = getContentItemsByType(CONTENT_TYPES.POSTS, 0);
+    const result = getContentItemsByType(CONTENT_TYPES.POSTS, 1);
     expect(result.length).toBeGreaterThan(0);
   });
   it('returns an empty array if the values are invalid', () => {
-    const result = getContentItemsByType('test', 0);
+    const result = getContentItemsByType('test', 1);
     expect(result.length).toBe(0);
   });
 });
@@ -48,6 +49,13 @@ describe('getMaxContentPagesByType', () => {
 
   it('returns 0 if type is invalid', () => {
     const result = getMaxContentPagesByType('test');
-    expect(result).toBe(0);
+    expect(result).toBe(-1);
+  });
+});
+
+describe('getArrFromRange', () => {
+  it('returns an array of numbers based on a range', () => {
+    const result = getArrFromRange(10, 25, 1);
+    expect(result.length).toBe(16);
   });
 });

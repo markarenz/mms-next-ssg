@@ -6,7 +6,7 @@ describe('PostsArchivePage', () => {
     render(
       <PostsArchivePage
         params={{
-          pageNum: '1',
+          pageNum: '2',
         }}
       />,
     );
