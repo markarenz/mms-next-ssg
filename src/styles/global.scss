@@ -1,0 +1,10 @@
+@import './includes/breakpoints.scss';
+@import './includes/colors.scss';
+@import './includes/base.scss';
+@import './includes/markdown.scss';
+@import './includes/animation.scss';
+
+html {
+  --time-sm: 0.2s;
+  --time-md: 0.3s;
+}

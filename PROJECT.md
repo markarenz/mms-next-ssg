@@ -20,20 +20,41 @@
 
 ---
 
-## [ ] MMS-2 Pagination
+## [x] MMS-2 Common Pagination
 
+- Branch: feat/mmsns-2-common-pagination
 - User Story
   As a user, I should have a common pagination experience that leads me around a list of posts or other data types. If we are on page 1 of the archives (/posts/archive/1), for example, the "previous" button should lead us to the main posts page (/posts).
 - ACs
-  - [ ] Reusable Pagination component that can be used for posts or any other type of iterable page/data
-  - [ ] Handle going to and from the base page and archives.
+  - [x] Reusable Pagination component that can be used for posts or any other type of iterable page/data
+  - [x] Handle going to and from the base page and archives.
+  - [x] Add icons for previous and next from SVG components
+  - [x] Update/add tests
 
 ---
 
-Page editing
+## [ ] MMS-3 Page Structure Basics
 
-## MMS- Image Handling
+- Branch: feat/mmsns-3-page-structure-basics
+- User Story
+  As a content editor, I should be able to add Markdown files in a specific structure with associated front-matter data to create pages on the site, using an image CDN.
+- ACs
+  - [ ] Set up image CDN
+  - [ ] Set up dynamic routing and SSG slug iteration
+  - [ ] Create format and type for page type and markdown format
+  - [ ] Create basic structure for some initial sections. Each section would have a type declaration and markdown format.
+  - [ ] Create common image component to handle image CDN
+  - [ ] Create a pair of dummy pages with internal links
+  - [ ] Test in S3 to confirm everything still works
+  - [ ] Update/add tests
 
-As a content editor, I should be able to add images easily and utilize them in pages and posts with
+---
+
+## [ ] MMS-4 ...
+
+- Branch:
+- User Story
+- ACs
+  - [ ]
 
 ---

@@ -50,5 +50,8 @@ export const getContentItemsByType = (type: string, page: number): Post[] => {
 };
 
 export const getMaxContentPagesByType = (type: string): number => {
-  return Math.ceil(getAllSlugsByType(type).length / postsPerPage);
+  return Math.ceil(getAllSlugsByType(type).length / postsPerPage) - 1;
 };
+
+export const getArrFromRange = (start: number, stop: number, step: number): number[] =>
+  Array.from({ length: (stop - start) / step + 1 }, (value, index) => start + index * step);

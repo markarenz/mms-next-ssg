@@ -5,6 +5,7 @@ import { CONTENT_TYPES } from '@/lib/constants';
 
 export default function PostsPage() {
   const posts = getContentItemsByType(CONTENT_TYPES.POSTS, 0);
+
   return (
     <main data-testid="page-posts">
       Posts Page
@@ -15,7 +16,7 @@ export default function PostsPage() {
         ))}
       </div>
       <div>
-        <Link href="/posts/archive/1">NEXT</Link>
+        <Link href="/posts/archive/1">See More</Link>
       </div>
     </main>
   );
