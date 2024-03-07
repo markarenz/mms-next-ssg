@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import { getContentItemsByType } from '@/lib/common-utils';
+import { getPosts } from '@/lib/post-utils';
 import PostListItem from '@/components/posts/PostListItem';
-import { CONTENT_TYPES } from '@/lib/constants';
 
 export default function PostsPage() {
-  const posts = getContentItemsByType(CONTENT_TYPES.POSTS, 0);
+  const posts = getPosts(0);
 
   return (
     <main data-testid="page-posts">

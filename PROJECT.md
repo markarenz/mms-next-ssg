@@ -33,28 +33,34 @@
 
 ---
 
-## [ ] MMS-3 Page Structure Basics
+## [ ] MMS-3 CMS Page Structure Basics
 
 - Branch: feat/mmsns-3-page-structure-basics
 - User Story
   As a content editor, I should be able to add Markdown files in a specific structure with associated front-matter data to create pages on the site, using an image CDN.
 - ACs
-  - [ ] Set up image CDN
-  - [ ] Set up dynamic routing and SSG slug iteration
-  - [ ] Create format and type for page type and markdown format
-  - [ ] Create basic structure for some initial sections. Each section would have a type declaration and markdown format.
-  - [ ] Create common image component to handle image CDN
-  - [ ] Create a pair of dummy pages with internal links
-  - [ ] Test in S3 to confirm everything still works
-  - [ ] Update/add tests
+  - [x] Set up image CDN
+  - [x] Set up dynamic routing and SSG slug iteration
+  - [x] Create format and type for pages sections
+  - [x] Create basic structure for some initial sections
+  - [x] Create common image component to handle image CDN URL construction and lazy
+  - [x] Generate SEO function for Metadata
+  - [x] Test in S3 and check social sharing to make sure this works
+  - [x] Update/add tests
 
 ---
 
-## [ ] MMS-4 ...
+## [ ] MMS-4 CMS Sections for Homepage
 
-- Branch:
-- User Story
+- Branch: feat/mmsns-4-cms-sections-for-homepage
+- User Story As a user, I should be able to go to the homepage and see styled content based on the Markdown-driven CMS.
 - ACs
-  - [ ]
+  - [ ] Build out all CMS section components to handle the homepage content
+  - [ ] Where possible create and use common components
+  - [ ] Make sure accessibility is correct via the Axe audit
+        loading
+  - [ ] Create a pair of dummy pages with internal links
+  - [ ] Test in S3 to confirm everything still works
+  - [ ] Update/add tests
 
 ---

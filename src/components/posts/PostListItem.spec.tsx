@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import PostListItem from './PostListItem';
-import { Post } from '@/interfaces/posts';
+import { CmsPost } from '@/interfaces/posts';
 
-const mockPost: Post = {
+const mockPost: CmsPost = {
   title: 'This is a title',
   metaDescription: 'This is a meta description.',
   slug: 'mock',

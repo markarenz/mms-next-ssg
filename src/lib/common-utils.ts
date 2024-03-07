@@ -1,10 +1,10 @@
 import { join } from 'path';
-import { Post } from '@/interfaces/posts';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { postsPerPage, dummyPost } from './constants';
+import { postsPerPage } from './constants';
 
-const getContentDirectoryByType = (type: string) => join(process.cwd(), `_content/${type}`);
+export const getContentDirectoryByType = (type: string, subPath?: string) =>
+  join(process.cwd(), `_content/${type}${subPath ? `/${subPath}` : ''}`);
 
 export const getAllSlugsByType = (type: string): string[] => {
   const directory = getContentDirectoryByType(type);
@@ -14,39 +14,16 @@ export const getAllSlugsByType = (type: string): string[] => {
   return [];
 };
 
-// NOTE: Add content types to the output type as the app grows
-export const getContentItemDetailByType = (type: string, slug: string): Post => {
-  const directory = getContentDirectoryByType(type);
+export const getContentDetail = (type: string, slug: string, subPath?: string): any => {
+  const directory = getContentDirectoryByType(type, subPath);
   if (fs.existsSync(directory)) {
     const fullPath = join(directory, `${slug}.md`);
     if (fs.existsSync(fullPath)) {
       const fileContents = fs.readFileSync(fullPath, 'utf8');
-      const { data, content } = matter(fileContents);
-      // NOTE: this ONLY works for Posts
-      // We can run if type === 'post' return...
-      return {
-        slug,
-        title: data.title,
-        datePublished: data.datePublished,
-        metaDescription: data.metaDescription,
-        excerpt: data.excerpt,
-        content,
-      };
+      return matter(fileContents);
     }
   }
-  // NOTE: add more dummies as we proceed
-  return dummyPost;
-};
-
-// NOTE: Add content types to the output type as the app grows
-export const getContentItemsByType = (type: string, page: number): Post[] => {
-  const slugs = getAllSlugsByType(type);
-  const allPosts = slugs
-    .map((slug) => getContentItemDetailByType(type, slug))
-    .filter((item) => !!item?.datePublished)
-    .sort((a, b) => (a.datePublished > b.datePublished ? -1 : 1));
-  const start = page * postsPerPage;
-  return allPosts.slice(start, start + postsPerPage);
+  return null;
 };
 
 export const getMaxContentPagesByType = (type: string): number => {

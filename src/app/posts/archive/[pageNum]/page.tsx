@@ -1,14 +1,15 @@
 import Link from 'next/link';
-import { getContentItemsByType, getMaxContentPagesByType } from '@/lib/common-utils';
+import { getMaxContentPagesByType } from '@/lib/common-utils';
+import { getPosts } from '@/lib/post-utils';
 import PostListItem from '@/components/posts/PostListItem';
 import Pagination from '@/components/common/pagination/Pagination';
 import { CONTENT_TYPES } from '@/lib/constants';
 
 export default function PostsArchivePage({ params }: { params: { pageNum: string } }) {
   const pageNum = parseFloat(`${params?.pageNum}`);
-  const posts = getContentItemsByType(CONTENT_TYPES.POSTS, pageNum);
+  const posts = getPosts(pageNum);
   const maxPages = getMaxContentPagesByType(CONTENT_TYPES.POSTS);
-  // TODO: redirect to base posts URL if pageNum = 1
+
   return (
     <main data-testid="page-posts-archive">
       Posts Page

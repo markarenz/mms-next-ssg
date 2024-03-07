@@ -1,12 +1,13 @@
 import Link from 'next/link';
-import { getAllSlugsByType, getContentItemDetailByType } from '@/lib/common-utils';
+import { getAllSlugsByType } from '@/lib/common-utils';
+import { getPostDetail } from '@/lib/post-utils';
 import { CONTENT_TYPES } from '@/lib/constants';
 import MarkdownContent from '@/components/common/markdownContent/MarkdownContent';
 // import styles from '@/styles/modules/home.module.scss';
 
 export default function PostDetailPage({ params }: { params: { slug: string } }) {
   const slug = params?.slug;
-  const post = getContentItemDetailByType(CONTENT_TYPES.POSTS, slug);
+  const post = getPostDetail(slug);
   return (
     <main data-testid="page-post-detail">
       Posts Detail

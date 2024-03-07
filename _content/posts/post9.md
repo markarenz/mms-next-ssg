@@ -1,6 +1,7 @@
 ---
 title: This is my title 9
 datePublished: '2024-01-09'
+image: default-image.jpg
 metaDescription: 'This is my meta description for post 9'
 excerpt: 'Nulla sodales libero turpis, eu pharetra nisi pulvinar sed. Sed eget tempus purus. Praesent ultrices dictum nulla, eget accumsan massa rutrum a'
 ---

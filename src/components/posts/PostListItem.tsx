@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import { Post } from '@/interfaces/posts';
+import { CmsPost } from '@/interfaces/posts';
 
 type Props = {
-  post: Post;
+  post: CmsPost;
 };
 const PostListItem: React.FC<Props> = ({ post }) => {
   return (
