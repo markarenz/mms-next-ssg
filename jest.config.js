@@ -16,7 +16,7 @@ const customJestConfig = {
     '[/\\\\]node_modules[/\\\\](?!(bail|ccount|character-entities|comma-separated-tokens|decode-named-*|escape-string-regexp|hast-util-*|is-plain-obj|markdown*|mdast-util-*|micromark*|property-information|react-markdown|remark-*|space-separated-*|trim-lines|trough|unified*|unist-util-*|vfile))',
   ],
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
-  coveragePathIgnorePatterns: ['<rootDir>/src/pages/_app.tsx', '<rootDir>/src/pages/_document.tsx'],
+  coveragePathIgnorePatterns: ['<rootDir>/src/lib/constants.ts', '<rootDir>/src/interfaces/'],
   testEnvironment: 'jest-environment-jsdom',
 };
 
