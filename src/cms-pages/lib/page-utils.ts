@@ -1,7 +1,7 @@
-import { CmsPage, CmsSection } from '@/interfaces/pages';
-import { CONTENT_TYPES, CONTENT_DEFAULTS } from './constants';
-import { getContentDetail } from './common-utils';
-import { getImageCdnUrl } from './image-utils';
+import { CmsPage, CmsSection } from '@/cms-pages/interfaces/pages';
+import { CONTENT_TYPES, CONTENT_DEFAULTS } from '../../common/lib/constants';
+import { getContentDetail } from '../../common/lib/common-utils/common-utils';
+import { getImageCdnUrl } from '../../common/lib/image-utils/image-utils';
 
 const getPageSectionDetail = (slug: string): CmsSection => {
   const contentDetail = getContentDetail(CONTENT_TYPES.PAGES, slug, 'sections');

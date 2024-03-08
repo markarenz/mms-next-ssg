@@ -3,5 +3,8 @@
   "plugins": ["jsx-a11y"],
   "env": {
     "jest": true
+  },
+  "rules": {
+    "@next/next/no-img-element": "off"
   }
 }

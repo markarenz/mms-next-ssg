@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { CmsPost } from '@/interfaces/posts';
+import { CmsPost } from '@/cms-posts/interfaces/posts';
 
 type Props = {
   post: CmsPost;

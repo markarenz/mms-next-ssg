@@ -33,7 +33,7 @@
 
 ---
 
-## [ ] MMS-3 CMS Page Structure Basics
+## [x] MMS-3 CMS Page Structure Basics
 
 - Branch: feat/mmsns-3-page-structure-basics
 - User Story
@@ -64,3 +64,5 @@
   - [ ] Update/add tests
 
 ---
+
+- [ ] sitemap XML generator

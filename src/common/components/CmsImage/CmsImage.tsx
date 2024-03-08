@@ -1,5 +1,5 @@
 import React from 'react';
-import { getImageCdnUrl } from '@/lib/image-utils';
+import { getImageCdnUrl } from '@/common/lib/image-utils/image-utils';
 
 type Props = {
   src: string;

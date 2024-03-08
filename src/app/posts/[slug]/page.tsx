@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { getAllSlugsByType } from '@/lib/common-utils';
-import { getPostDetail } from '@/lib/post-utils';
-import { CONTENT_TYPES } from '@/lib/constants';
-import MarkdownContent from '@/components/common/markdownContent/MarkdownContent';
+import { getAllSlugsByType } from '@/common/lib/common-utils/common-utils';
+import { getPostDetail } from '@/cms-posts/lib/post-utils';
+import { CONTENT_TYPES } from '@/common/lib/constants';
+import MarkdownContent from '@/common/components/MarkdownContent/MarkdownContent';
 // import styles from '@/styles/modules/home.module.scss';
 
 export default function PostDetailPage({ params }: { params: { slug: string } }) {

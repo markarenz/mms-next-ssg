@@ -1,11 +1,12 @@
 import React from 'react';
-import { CmsSection } from '@/interfaces/pages';
-import CmsImage from '@/components/common/images/CmsImage';
+import { CmsSection } from '@/cms-pages/interfaces/pages';
+import CmsImage from '@/common/components/CmsImage/CmsImage';
 
 type Props = {
   section: CmsSection;
 };
-const FooterDefault: React.FC<Props> = ({ section }) => {
+const FooterDefault: React.FC<Props> = () => {
+  // section
   return (
     <footer>
       Yes this is a footer.

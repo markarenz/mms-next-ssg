@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { getPosts } from '@/lib/post-utils';
-import PostListItem from '@/components/posts/PostListItem';
+import { getPosts } from '@/cms-posts/lib/post-utils';
+import PostListItem from '@/cms-posts/components/PostListItem/PostListItem';
 
 export default function PostsPage() {
   const posts = getPosts(0);

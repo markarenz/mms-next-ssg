@@ -1,6 +1,6 @@
 import React from 'react';
-import FooterDefault from '@/components/common/cmsPage/sections/FooterDefault/FooterDefault';
-import { CmsSection } from '@/interfaces/pages';
+import FooterDefault from '@/cms-sections/FooterDefault/footer-default';
+import { CmsSection } from '@/cms-pages/interfaces/pages';
 
 type Props = {
   section: CmsSection;

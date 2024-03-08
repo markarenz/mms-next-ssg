@@ -1,5 +1,5 @@
 import React from 'react';
-import { CmsPage } from '@/interfaces/pages';
+import { CmsPage } from '@/cms-pages/interfaces/pages';
 import CmsPageSection from './CmsPageSection';
 
 type Props = {

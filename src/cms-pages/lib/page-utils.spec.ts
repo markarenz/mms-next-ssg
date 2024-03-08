@@ -1,4 +1,4 @@
-import { CmsPage } from '@/interfaces/pages';
+import { CmsPage } from '@/cms-pages/interfaces/pages';
 import { getPageDetail, getPageMetadata } from './page-utils';
 
 describe('getPageDetail', () => {
