@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { getMaxContentPagesByType } from '@/lib/common-utils';
-import { getPosts } from '@/lib/post-utils';
-import PostListItem from '@/components/posts/PostListItem';
-import Pagination from '@/components/common/pagination/Pagination';
-import { CONTENT_TYPES } from '@/lib/constants';
+import { getMaxContentPagesByType } from '@/common/lib/common-utils/common-utils';
+import { getPosts } from '@/cms-posts/lib/post-utils';
+import PostListItem from '@/cms-posts/components/PostListItem/PostListItem';
+import Pagination from '@/common/components/Pagination/Pagination';
+import { CONTENT_TYPES } from '@/common/lib/constants';
 
 export default function PostsArchivePage({ params }: { params: { pageNum: string } }) {
   const pageNum = parseFloat(`${params?.pageNum}`);

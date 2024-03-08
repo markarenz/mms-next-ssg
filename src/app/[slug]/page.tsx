@@ -1,8 +1,8 @@
-import { getAllSlugsByType } from '@/lib/common-utils';
-import { getPageDetail } from '@/lib/page-utils';
-import { CONTENT_TYPES } from '@/lib/constants';
-import CmsPageContent from '@/components/common/cmsPage/CmsPageContent';
-import { getPageMetadata } from '@/lib/page-utils';
+import { getAllSlugsByType } from '@/common/lib/common-utils/common-utils';
+import { getPageDetail } from '@/cms-pages/lib/page-utils';
+import { CONTENT_TYPES } from '@/common/lib/constants';
+import CmsPageContent from '@/cms-pages/components/CmsPageContent/CmsPageContent';
+import { getPageMetadata } from '@/cms-pages/lib/page-utils';
 import { Metadata } from 'next';
 
 type Props = {

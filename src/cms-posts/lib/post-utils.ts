@@ -1,6 +1,10 @@
-import { CmsPost } from '@/interfaces/posts';
-import { getAllSlugsByType, getContentDetail, getMaxContentPagesByType } from './common-utils';
-import { CONTENT_TYPES, postsPerPage } from './constants';
+import { CmsPost } from '@/cms-posts/interfaces/posts';
+import {
+  getAllSlugsByType,
+  getContentDetail,
+  getMaxContentPagesByType,
+} from '../../common/lib/common-utils/common-utils';
+import { CONTENT_TYPES, postsPerPage } from '../../common/lib/constants';
 
 export const getPostDetail = (slug: string): CmsPost => {
   const contentDetail = getContentDetail(CONTENT_TYPES.POSTS, slug);

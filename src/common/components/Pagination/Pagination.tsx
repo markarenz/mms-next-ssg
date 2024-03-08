@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { getArrFromRange } from '@/lib/common-utils';
-import { CONTENT_ROUTES } from '@/lib/constants';
+import { getArrFromRange } from '@/common/lib/common-utils/common-utils';
+import { CONTENT_ROUTES } from '@/common/lib/constants';
 import IconTriangle from '../icons/IconTriangleRight';
 import styles from './pagination.module.scss';
 

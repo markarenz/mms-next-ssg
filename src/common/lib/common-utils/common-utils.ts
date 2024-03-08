@@ -1,7 +1,7 @@
 import { join } from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { postsPerPage } from './constants';
+import { postsPerPage } from '../constants';
 
 export const getContentDirectoryByType = (type: string, subPath?: string) =>
   join(process.cwd(), `_content/${type}${subPath ? `/${subPath}` : ''}`);

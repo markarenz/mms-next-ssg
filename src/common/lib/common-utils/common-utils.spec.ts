@@ -5,7 +5,7 @@ import {
   getContentDetail,
   getMaxContentPagesByType,
 } from './common-utils';
-import { CONTENT_TYPES } from './constants';
+import { CONTENT_TYPES } from '@/common/lib/constants';
 
 describe('getAllSlugsByType', () => {
   it('returns a list of slugs for a given content type', () => {

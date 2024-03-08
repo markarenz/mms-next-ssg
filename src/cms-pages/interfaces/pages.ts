@@ -1,8 +1,3 @@
-export enum Alignment {
-  'left',
-  'right',
-}
-
 export interface CmsSection {
   slug: string;
   type: string;
@@ -14,7 +9,7 @@ export interface CmsSection {
   buttonLabel?: string;
   buttonLink?: string;
   numItems?: number;
-  align?: Alignment;
+  align?: string;
 }
 
 export interface CmsPage {

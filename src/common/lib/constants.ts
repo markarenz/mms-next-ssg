@@ -1,4 +1,4 @@
-import { ContentRoute } from '@/interfaces/app';
+import { ContentRoute } from '@/common/interfaces/app';
 
 export const postsPerPage = 3;
 

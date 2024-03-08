@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Pagination from './Pagination';
-import { CONTENT_TYPES } from '@/lib/constants';
+import { CONTENT_TYPES } from '@/common/lib/constants';
 
 describe('Pagination', () => {
   it('renders component', () => {
