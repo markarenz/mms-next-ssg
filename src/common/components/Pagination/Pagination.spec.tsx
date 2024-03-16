@@ -6,36 +6,36 @@ describe('Pagination', () => {
   it('renders component', () => {
     render(<Pagination pageNum={2} maxPages={20} contentType={CONTENT_TYPES.POSTS} />);
     const element = screen.getByTestId('pagination');
-    expect(element).toBeTruthy();
+    expect(element).toBeInTheDocument();
   });
 
   it('renders component with previous button', () => {
     render(<Pagination pageNum={1} maxPages={5} contentType={CONTENT_TYPES.POSTS} />);
     const element = screen.getByTestId('pagination');
-    expect(element).toBeTruthy();
+    expect(element).toBeInTheDocument();
     const prev = screen.queryByTestId('pagination-prev-link');
-    expect(prev).toBeTruthy();
+    expect(prev).toBeInTheDocument();
     const next = screen.queryByTestId('pagination-next-link');
-    expect(next).toBeTruthy();
+    expect(next).toBeInTheDocument();
   });
 
   it('renders component with no previous button', () => {
     render(<Pagination pageNum={0} maxPages={5} contentType={CONTENT_TYPES.POSTS} />);
     const element = screen.getByTestId('pagination');
-    expect(element).toBeTruthy();
+    expect(element).toBeInTheDocument();
     const prev = screen.queryByTestId('pagination-prev-link');
-    expect(prev).toBeFalsy();
+    expect(prev).not.toBeInTheDocument();
     const next = screen.queryByTestId('pagination-next-link');
-    expect(next).toBeTruthy();
+    expect(next).toBeInTheDocument();
   });
 
   it('renders component with no next button', () => {
     render(<Pagination pageNum={5} maxPages={5} contentType={CONTENT_TYPES.POSTS} />);
     const element = screen.getByTestId('pagination');
-    expect(element).toBeTruthy();
+    expect(element).toBeInTheDocument();
     const prev = screen.queryByTestId('pagination-prev-link');
-    expect(prev).toBeTruthy();
+    expect(prev).toBeInTheDocument();
     const next = screen.queryByTestId('pagination-next-link');
-    expect(next).toBeFalsy();
+    expect(next).not.toBeInTheDocument();
   });
 });

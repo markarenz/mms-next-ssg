@@ -50,10 +50,22 @@
 
 ---
 
-## [ ] MMS-4 CMS Sections for Homepage
+## [ ] MMS-4 Header & Footer
 
-- Branch: feat/mmsns-4-cms-sections-for-homepage
-- User Story As a user, I should be able to go to the homepage and see styled content based on the Markdown-driven CMS.
+- Branch: feat/mmsns-4-header-footer
+- User Story: As a user, I should be able to see the navigation and footer for every page. As a content editor, I should be able to swap out the header depending on the page.
+- [x] Build out global nav
+- [x] Add a header & footer slot to the CMS page structure to make it easy to swap them out
+- [x] Build a homepage header
+- [x] Build a footer
+- [x] Update/add tests
+
+---
+
+## [ ] MMS-5 Homepage Content
+
+- Branch: feat/mmsns-5-homepage-content
+- User Story: As a user, I should be able to go to the homepage and see styled content based on the Markdown-driven CMS.
 - ACs
   - [ ] Build out all CMS section components to handle the homepage content
   - [ ] Where possible create and use common components
@@ -64,5 +76,15 @@
   - [ ] Update/add tests
 
 ---
+
+## [ ] MMS-X Search Feature
+
+- User Story: As a user, I should have the ability to search all content types.
+- [ ] Write functions that create an index of words (3 letters or longer) as they appear in each item by content type.
+- [ ] Create a search page that uses the data created at build time to search through all pages live.
+
+---
+
+## [ ] MMS-X SEO Elements
 
 - [ ] sitemap XML generator

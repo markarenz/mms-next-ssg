@@ -5,7 +5,7 @@ describe('Home', () => {
   it('renders component', () => {
     render(<Home />);
     const page = screen.getByTestId('page-home');
-    expect(page).toBeTruthy();
+    expect(page).toBeInTheDocument();
   });
 });
 

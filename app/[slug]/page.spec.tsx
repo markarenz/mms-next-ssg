@@ -5,7 +5,7 @@ describe('CmsPage', () => {
   it('renders mock CMS page', () => {
     render(<CmsPage params={{ slug: 'home' }} />);
     const element = screen.getByTestId('page-home');
-    expect(element).toBeTruthy();
+    expect(element).toBeInTheDocument();
   });
 });
 

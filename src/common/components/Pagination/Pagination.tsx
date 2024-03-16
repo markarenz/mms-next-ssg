@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { getArrFromRange } from '@/common/lib/common-utils/common-utils';
 import { CONTENT_ROUTES } from '@/common/lib/constants';
-import IconTriangle from '../icons/IconTriangleRight';
+import IconTriangle from '@/common/components/Icons/IconTriangle';
 import styles from './pagination.module.scss';
 
 type Props = {

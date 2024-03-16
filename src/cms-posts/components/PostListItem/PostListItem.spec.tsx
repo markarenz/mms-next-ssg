@@ -15,6 +15,6 @@ describe('MarkdownContent', () => {
   it('renders component', () => {
     render(<PostListItem post={mockPost} />);
     const element = screen.getByTestId('post-list-item');
-    expect(element).toBeTruthy();
+    expect(element).toBeInTheDocument();
   });
 });
