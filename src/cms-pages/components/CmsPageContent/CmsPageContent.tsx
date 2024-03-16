@@ -1,6 +1,7 @@
 import React from 'react';
 import { CmsPage } from '@/cms-pages/interfaces/pages';
 import CmsPageSection from './CmsPageSection';
+import Footer from '@/common/components/Footer/Footer';
 
 type Props = {
   page: CmsPage;
@@ -15,7 +16,7 @@ const CmsPageContent: React.FC<Props> = ({ page }) => {
           <CmsPageSection section={section} key={section.slug} />
         ))}
       </main>
-      {page.cmsSectionFooter && <CmsPageSection section={page.cmsSectionFooter} />}
+      <Footer />
     </>
   );
 };

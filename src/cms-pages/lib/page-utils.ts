@@ -30,7 +30,6 @@ export const getPageDetail = (slug: string): CmsPage => {
     title: data?.title || CONTENT_DEFAULTS.TITLE,
     image: data?.image || CONTENT_DEFAULTS.IMAGE,
     header: data?.header,
-    footer: data?.footer,
     datePublished: data?.datePublished || CONTENT_DEFAULTS.DATE_PUBLISHED,
     metaDescription: data?.metaDescription || CONTENT_DEFAULTS.DESCRIPTION,
     sections: data?.sections || [],

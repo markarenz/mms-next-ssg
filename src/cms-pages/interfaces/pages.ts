@@ -10,6 +10,8 @@ export interface CmsSection {
   buttonLink?: string;
   numItems?: number;
   align?: string;
+  text1?: string;
+  text2?: string;
 }
 
 export interface CmsPage {
@@ -19,7 +21,6 @@ export interface CmsPage {
   datePublished: string;
   metaDescription: string;
   header: string;
-  footer: string;
   sections: string[];
   cmsSectionHeader?: CmsSection;
   cmsSectionFooter?: CmsSection;

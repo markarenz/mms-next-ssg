@@ -1,0 +1,40 @@
+.root {
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--color-gray-dark);
+  font-size: 1rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-headline);
+  background-color: var(--color-main-bg);
+  span {
+    position: relative;
+    text-transform: uppercase;
+    color: white;
+    transition: 0.2s color ease;
+  }
+  &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    opacity: 0.3;
+    transition: 0.2s all ease;
+    background-color: white;
+  }
+  &:hover {
+    span {
+      color: black;
+    }
+    &:before {
+      width: 100%;
+      left: 0;
+    }
+  }
+}

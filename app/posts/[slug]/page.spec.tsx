@@ -11,7 +11,7 @@ describe('PostDetailPage', () => {
       />,
     );
     const page = screen.getByTestId('page-post-detail');
-    expect(page).toBeTruthy();
+    expect(page).toBeInTheDocument();
   });
 });
 

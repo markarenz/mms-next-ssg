@@ -17,7 +17,7 @@ describe('RootLayout', () => {
     );
 
     const layout = screen.getByTestId('child');
-    expect(layout).toBeTruthy();
+    expect(layout).toBeInTheDocument();
   });
 });
 describe('metadata', () => {

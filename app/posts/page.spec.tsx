@@ -5,6 +5,6 @@ describe('PostsPage', () => {
   it('renders component', () => {
     render(<PostsPage />);
     const page = screen.getByTestId('page-posts');
-    expect(page).toBeTruthy();
+    expect(page).toBeInTheDocument();
   });
 });

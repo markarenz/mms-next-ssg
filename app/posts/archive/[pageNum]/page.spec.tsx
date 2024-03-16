@@ -11,7 +11,7 @@ describe('PostsArchivePage', () => {
       />,
     );
     const page = screen.getByTestId('page-posts-archive');
-    expect(page).toBeTruthy();
+    expect(page).toBeInTheDocument();
   });
 
   it('renders component: subsequent pages', () => {
@@ -23,7 +23,7 @@ describe('PostsArchivePage', () => {
       />,
     );
     const page = screen.getByTestId('page-posts-archive');
-    expect(page).toBeTruthy();
+    expect(page).toBeInTheDocument();
   });
 });
 

@@ -5,6 +5,11 @@
 @import './includes/animation.scss';
 
 html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  /* VARIABLES */
   --time-sm: 0.2s;
   --time-md: 0.3s;
 }

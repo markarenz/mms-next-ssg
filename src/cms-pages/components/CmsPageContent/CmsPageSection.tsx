@@ -1,5 +1,6 @@
 import React from 'react';
-import FooterDefault from '@/cms-sections/FooterDefault/footer-default';
+import PageHeaderOrange from '@/cms-sections/page-header-orange/PageHeaderOrange';
+import SkillIcons from '@/cms-sections/skill-icons/SkillIcons';
 import { CmsSection } from '@/cms-pages/interfaces/pages';
 
 type Props = {
@@ -7,17 +8,17 @@ type Props = {
 };
 const CmsPageSection: React.FC<Props> = ({ section }) => {
   switch (section.type) {
-    case 'footer-default':
-      return <FooterDefault section={section} />;
-    case '':
+    case 'page-header-orange':
+      return <PageHeaderOrange section={section} />;
+    case 'skill-icons':
+      return <SkillIcons section={section} />;
     default:
       return (
-        <div>
+        <div style={{ position: 'relative', padding: '2rem', backgroundColor: '#ddd' }}>
           Section Not Found: {section.slug} {section.type}
         </div>
       );
   }
-  // return <div>{JSON.stringify(section)}</div>;
 };
 
 export default CmsPageSection;
