@@ -15,7 +15,6 @@ const PageHeaderOrange: React.FC<Props> = ({ section }) => {
 
   useEffect(() => {
     setTimeout(() => {
-      console.log('...setting isInitialized to true');
       setIsInitialized(true);
     }, 100);
   }, []);

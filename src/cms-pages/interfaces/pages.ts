@@ -1,6 +1,7 @@
 export interface CmsSection {
   slug: string;
   type: string;
+  variant?: string;
   headline?: string;
   subhead?: string;
   image1?: string;
