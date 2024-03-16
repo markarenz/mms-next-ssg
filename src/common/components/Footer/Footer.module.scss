@@ -94,6 +94,10 @@
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
+  margin-top: 2rem;
+  @include for-tablet-landscape-up {
+    margin-top: 0;
+  }
   &.submitted {
     opacity: 0.5;
     pointer-events: none;

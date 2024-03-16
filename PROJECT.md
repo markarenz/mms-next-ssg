@@ -50,35 +50,84 @@
 
 ---
 
-## [ ] MMS-4 Header & Footer
+## [x] MMS-4 Header & Footer
 
 - Branch: feat/mmsns-4-header-footer
 - User Story: As a user, I should be able to see the navigation and footer for every page. As a content editor, I should be able to swap out the header depending on the page.
 - [x] Build out global nav
 - [x] Add a header & footer slot to the CMS page structure to make it easy to swap them out
-- [x] Build a homepage header
+- [x] Build a homepage header (content block: page-header-orange)
 - [x] Build a footer
 - [x] Update/add tests
 
 ---
 
-## [ ] MMS-5 Homepage Content
+## [x] MMS-5 Content Blocks: One Column Text
 
-- Branch: feat/mmsns-5-homepage-content
-- User Story: As a user, I should be able to go to the homepage and see styled content based on the Markdown-driven CMS.
+- Branch: feat/mmsns-5-content-one-col
+- User Story: As a user, I should see the one column content block with content coming from the CMS
 - ACs
-  - [ ] Build out all CMS section components to handle the homepage content
-  - [ ] Where possible create and use common components
-  - [ ] Make sure accessibility is correct via the Axe audit
-        loading
-  - [ ] Create a pair of dummy pages with internal links
-  - [ ] Test in S3 to confirm everything still works
+  - [x] Build out one-col content block type with a variant for "light" and "dark" and create content as needed
+  - [x] Update/add tests
+
+---
+
+## [ ] MMS-6 Content Blocks: CTA
+
+- Branch: feat/mmsns-6-content-blocks-cta
+- User Story: As a user, I should see the primary CTA with content coming from the CMS for various elements
+- ACs
+  - [ ] Build out cta-1 content block type and create content as needed
   - [ ] Update/add tests
 
 ---
 
-## [ ] MMS-X Search Feature
+## [ ] MMS-7 Content Blocks: Skill Icons
 
+- Branch: feat/mmsns-7-content-blocks-skill-icons
+- User Story: As a user, I should see the skill section on the homepage with icons for various skills.
+- ACs
+  - [ ] Build out skill-icons content block type and create icons as needed
+  - [ ] Use CMS to determine order of icons
+  - [ ] Update/add tests
+
+---
+
+## [ ] MMS-8 Content Blocks: Post List
+
+- Branch: feat/mmsns-8-content-posts-list
+- User Story: As a user, I should see the post list content block with content coming from the CMS. The items should link to detail pages for each item.
+- ACs
+  - [ ] Build out posts-list content block type and create content as needed
+  - [ ] Update/add tests
+
+---
+
+## [ ] MMS-9 Content Blocks: Projects List
+
+- Branch: feat/mmsns-9-content-projects-list
+- User Story: As a user, I should see the projects list content block with content coming from the CMS. The items should link to detail pages for each item.
+- ACs
+  - [ ] Build out projects-list content block type and create content as needed
+  - [ ] Update/add tests
+
+---
+
+## [ ] MMS-10 Dynamic Routing and 404
+
+- Branch: feat/mmsns-10-dynamic-routing-and-404
+- User Story: As a user, I should see a custom 404 page when I enter an unused URL on the site. As an editor, I should be able to create a page on the site without having to add a page to the `/app` directory.
+- ACs
+  - [ ] Create a catch-all page for dynamic routing and return 404 content when the page slug is not valid.
+  - [ ] Create a custom 404 page
+  - [ ] Check the current state of the site in S3 and make sure everything still works.
+  - [ ] Update/add tests
+
+---
+
+## [ ] MMS-11 Search Feature
+
+- Branch: feat/mmsns-11-static-search
 - User Story: As a user, I should have the ability to search all content types.
 - [ ] Write functions that create an index of words (3 letters or longer) as they appear in each item by content type.
 - [ ] Create a search page that uses the data created at build time to search through all pages live.

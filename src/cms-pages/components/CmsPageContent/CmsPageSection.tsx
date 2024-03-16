@@ -1,6 +1,7 @@
 import React from 'react';
 import PageHeaderOrange from '@/cms-sections/page-header-orange/PageHeaderOrange';
 import SkillIcons from '@/cms-sections/skill-icons/SkillIcons';
+import OneCol from '@/cms-sections/one-col/OneCol';
 import { CmsSection } from '@/cms-pages/interfaces/pages';
 
 type Props = {
@@ -10,6 +11,8 @@ const CmsPageSection: React.FC<Props> = ({ section }) => {
   switch (section.type) {
     case 'page-header-orange':
       return <PageHeaderOrange section={section} />;
+    case 'one-col':
+      return <OneCol section={section} />;
     case 'skill-icons':
       return <SkillIcons section={section} />;
     default:
