@@ -25,9 +25,7 @@ const PageHeaderOrange: React.FC<Props> = ({ section }) => {
 
   return (
     <div data-testid="page-header-orange" className={styles.root}>
-      <div className={styles.bgWrapper}>
-        <CmsImage alt="" src={section.image1} />
-      </div>
+      <CmsImage alt={`background for ${section.headline}`} isBgImage src={section.image1} />
       <div className={`${styles.bgWrapper} ${styles.texture}`} />
       <div className={styles.bgGradient} />
       <div className={styles.inner}>

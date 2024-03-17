@@ -72,13 +72,15 @@
 
 ---
 
-## [ ] MMS-6 Content Blocks: CTA
+## [x] MMS-6 Content Blocks: CTA
 
 - Branch: feat/mmsns-6-content-blocks-cta
 - User Story: As a user, I should see the primary CTA with content coming from the CMS for various elements
 - ACs
-  - [ ] Build out cta-1 content block type and create content as needed
-  - [ ] Update/add tests
+  - [x] Build out cta-1 content block type and create content as needed
+  - [x] Refactor breakpoints so we can have media queries within mixins
+  - [x] Refactor CmsImage to handle being a standard image or a background image with focalPoint (background position)
+  - [x] Update/add tests
 
 ---
 

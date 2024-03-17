@@ -8,14 +8,14 @@ ReactJS
 NextJS
 Typescript
 NodeJS
-PHP
-Laravel
-iOS
-Unit Testing
 mySQL
 PostGres
 MongoDB
 GraphQL
+PHP
+Laravel
+iOS
+Unit Testing
 CI/CD
 Agile
 Creative Cloud
