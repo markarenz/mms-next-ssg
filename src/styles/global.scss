@@ -3,6 +3,7 @@
 @import './includes/base.scss';
 @import './includes/markdown.scss';
 @import './includes/animation.scss';
+@import './includes/typography.scss';
 
 html {
   -moz-text-size-adjust: none;
@@ -12,4 +13,10 @@ html {
   /* VARIABLES */
   --time-sm: 0.2s;
   --time-md: 0.3s;
+
+  /* BREAKPOINTS */
+  --breakpoint-tablet-portrait: $breakpointTabletPortrait;
+  --breakpoint-tablet-landscape: $breakpointTabletLandscape;
+  --breakpoint-desktop: $breakpointDesktop;
+  --breakpoint-big-desktop: $breakpointBigDesktop;
 }

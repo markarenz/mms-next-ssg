@@ -4,15 +4,14 @@
     font-weight: bold;
   }
 
-  // h2 {
-  //   font-size: 1.5rem;
-  //   font-weight: bold;
-  //   margin: 0;
-  //   padding: 0;
-  // }
-
   p {
     margin-bottom: 1rem;
+  }
+
+  &.inline {
+    p {
+      margin: 0;
+    }
   }
 
   ul {

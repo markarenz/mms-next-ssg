@@ -1,20 +1,25 @@
+$breakpointTabletPortrait: 600px;
+$breakpointTabletLandscape: 900px;
+$breakpointDesktop: 1200px;
+$breakpointBigDesktop: 1800px;
+
 @mixin for-tablet-portrait-up {
-  @media (min-width: 600px) {
+  @media (min-width: $breakpointTabletPortrait) {
     @content;
   }
 }
 @mixin for-tablet-landscape-up {
-  @media (min-width: 900px) {
+  @media (min-width: $breakpointTabletLandscape) {
     @content;
   }
 }
 @mixin for-desktop-up {
-  @media (min-width: 1200px) {
+  @media (min-width: $breakpointDesktop) {
     @content;
   }
 }
 @mixin for-big-desktop-up {
-  @media (min-width: 1800px) {
+  @media (min-width: $breakpointBigDesktop) {
     @content;
   }
 }

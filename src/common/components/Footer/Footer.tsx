@@ -23,8 +23,8 @@ const Footer = () => {
       <div className="container">
         <div className={styles.footerContentWrap}>
           <div className={styles.gridWrap}>
-            <div>
-              <Link href="/">
+            <div className={styles.footerLogoWrap}>
+              <Link href="/" aria-label="Mark Makes Stuff Homepage">
                 <div className={styles.footerLogo}>
                   <MMSLogoText />
                 </div>
@@ -49,6 +49,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                     className={styles.footerSocialLink}
+                    aria-label='LinkedIn for "Mark Arenz"'
                   >
                     <IconWhiteLinkedIn />
                   </a>
@@ -59,6 +60,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                     className={styles.footerSocialLink}
+                    aria-label='YouTube Channel for "Mark Arenz"'
                   >
                     <IconWhiteYouTube />
                   </a>

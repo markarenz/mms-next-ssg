@@ -15,4 +15,10 @@ describe('CmsImage', () => {
     const element = screen.getByTestId('cms-image');
     expect(element.getAttribute('loading')).toEqual('eager');
   });
+
+  it('renders a background', () => {
+    render(<CmsImage src="default-image.jpg" isBgImage style={{ paddingTop: 10 }} />);
+    const element = screen.getByTestId('cms-bg-image');
+    expect(element).toBeInTheDocument();
+  });
 });
