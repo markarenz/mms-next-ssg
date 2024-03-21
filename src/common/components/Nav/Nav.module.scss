@@ -1,3 +1,5 @@
+@import '../../../styles/modulebase.scss';
+
 .header {
   position: fixed;
   height: 80px;
@@ -18,10 +20,9 @@
 .logo {
   position: absolute;
   left: 20px;
-  top: 10px;
-  @mixin for-tablet-portrait-up {
-    top: 20px;
-  }
+  top: 20px;
+  // @include for-tablet-portrait-up {
+  // }
   width: 100px;
   height: 100px;
   transition: 0.5s all ease-in-out;

@@ -1,18 +1,18 @@
 'use client';
 
-import React, { useState, useEffect, useRef, RefObject } from 'react';
-import styles from './SkillIcons.module.scss';
-import SkillIcon from './icons/SkillIcon';
+import React, { useState, useEffect } from 'react';
 import { CmsSection } from '@/cms-pages/interfaces/pages';
-import useOnScreen from '@/common/hooks/onScreen';
+import { useInView } from 'react-intersection-observer';
+import SkillIcon from './icons/SkillIcon';
+import styles from './SkillIcons.module.scss';
 
 type Props = {
   section: CmsSection;
 };
 // eslint-disable-next-line
 const SkillIcons: React.FC<Props> = ({ section }) => {
-  const ref = useRef<HTMLElement>(null);
-  const isOnScreen = useOnScreen(ref, true);
+  // const ref = useRef<HTMLElement>(null);
+  const { ref, inView } = useInView({ threshold: 0, triggerOnce: true });
   const [yearsCount, setYearsCount] = useState(1);
   const skills = section.content?.split('\n').filter((skill) => skill !== '');
   const getSlugForSkill = (skill: string) => {
@@ -39,7 +39,7 @@ const SkillIcons: React.FC<Props> = ({ section }) => {
     };
   }, []);
 
-  const animClass = isOnScreen ? 'anim-in' : '';
+  const animClass = inView ? 'anim-in' : '';
   const headline = `${section.headline}`.replace('__YEARS__', `${new Date().getFullYear() - 1992}`);
 
   return (
@@ -77,7 +77,7 @@ const SkillIcons: React.FC<Props> = ({ section }) => {
           </h2>
         </div>
 
-        <div className={styles.skillGrid} ref={ref as RefObject<HTMLDivElement>}>
+        <div className={styles.skillGrid} ref={ref}>
           {skills?.map((skill) => (
             <div className={styles.skillItem} key={skill}>
               <div>

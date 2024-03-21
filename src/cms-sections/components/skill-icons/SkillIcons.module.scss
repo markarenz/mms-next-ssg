@@ -25,7 +25,7 @@
       @include for-tablet-landscape-up {
         display: flex;
         font-size: 8rem;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         border-bottom: none;
         margin-bottom: 0;
@@ -90,7 +90,7 @@
   .skillItem {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     width: 9rem;
     height: 9rem;
