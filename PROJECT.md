@@ -84,14 +84,15 @@
 
 ---
 
-## [ ] MMS-7 Content Blocks: Skill Icons
+## [x] MMS-7 Content Blocks: Skill Icons
 
 - Branch: feat/mmsns-7-content-blocks-skill-icons
 - User Story: As a user, I should see the skill section on the homepage with icons for various skills.
 - ACs
-  - [ ] Build out skill-icons content block type and create icons as needed
-  - [ ] Use CMS to determine order of icons
-  - [ ] Update/add tests
+  - [x] Create new skill icons
+  - [x] Build out skill-icons content block
+  - [x] Use CMS to determine order of icons
+  - [x] Update/add tests
 
 ---
 
