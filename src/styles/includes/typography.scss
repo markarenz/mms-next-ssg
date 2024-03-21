@@ -42,7 +42,6 @@
   font-family: var(--font-headline);
   font-size: 3rem;
   line-height: 1.3;
-  text-align: center;
   font-weight: 100;
   margin: 0;
   @media (min-width: var(--breakpoint-tablet-portrait)) {
@@ -56,9 +55,30 @@
   line-height: 1.3;
   font-weight: 400;
   font-style: italic;
-  text-align: center;
   margin: 0;
   @media (min-width: var(--breakpoint-tablet-portrait)) {
     font-size: 2rem;
+  }
+}
+
+@mixin text-variant-headline-md {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 100;
+  margin: 0;
+  @media (min-width: var(--breakpoint-tablet-portrait)) {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin text-variant-headline-sm {
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 100;
+  margin: 0;
+  @media (min-width: var(--breakpoint-tablet-portrait)) {
+    font-size: 1rem;
   }
 }

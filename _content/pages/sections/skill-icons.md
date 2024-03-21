@@ -7,6 +7,8 @@ subhead: This is not my first rodeo.
 ReactJS
 NextJS
 Typescript
+Redux
+SCSS/SASS
 NodeJS
 mySQL
 PostGres
@@ -15,8 +17,8 @@ GraphQL
 PHP
 Laravel
 iOS
-Unit Testing
-CI/CD
+Jest
+GitLab
+AWS
 Agile
-Creative Cloud
-Leadership
+Adobe
