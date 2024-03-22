@@ -3,6 +3,7 @@ import PageHeaderOrange from '@/cms-sections/components/page-header-orange/PageH
 import SkillIcons from '@/cms-sections/components/skill-icons/SkillIcons';
 import OneCol from '@/cms-sections/components/one-col/OneCol';
 import CtaOne from '@/cms-sections/components/cta-1/CtaOne';
+import TextBanner from '@/cms-sections/components/text-banner/TextBanner';
 import { CmsSection } from '@/cms-pages/interfaces/pages';
 
 type Props = {
@@ -16,6 +17,8 @@ const CmsPageSection: React.FC<Props> = ({ section }) => {
       return <OneCol section={section} />;
     case 'cta-1':
       return <CtaOne section={section} />;
+    case 'text-banner':
+      return <TextBanner section={section} />;
     case 'skill-icons':
       return <SkillIcons section={section} />;
     default:

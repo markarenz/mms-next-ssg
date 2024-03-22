@@ -36,6 +36,7 @@ const Nav = () => {
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('keydown', handleEscListener);
+    handleScroll();
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('keydown', handleEscListener);

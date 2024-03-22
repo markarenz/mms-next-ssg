@@ -96,7 +96,17 @@
 
 ---
 
-## [ ] MMS-8 Content Blocks: Post List
+## [ ] MMS-8 Content Blocks: Text Banner
+
+- Branch: feat/mmsns-8-content-blocks-text-banner
+- User Story: As a user, I should see the text banner matching the style of the design. As an editor, I should be able to set the variant, headline, and subhead.
+- ACs
+  - [ ] Create new text-banner section
+  - [ ] Update/add tests
+
+---
+
+## [ ] MMS-9 Content Blocks: Post List
 
 - Branch: feat/mmsns-8-content-posts-list
 - User Story: As a user, I should see the post list content block with content coming from the CMS. The items should link to detail pages for each item.
@@ -106,7 +116,7 @@
 
 ---
 
-## [ ] MMS-9 Content Blocks: Projects List
+## [ ] MMS-10 Content Blocks: Projects List
 
 - Branch: feat/mmsns-9-content-projects-list
 - User Story: As a user, I should see the projects list content block with content coming from the CMS. The items should link to detail pages for each item.
@@ -116,7 +126,7 @@
 
 ---
 
-## [ ] MMS-10 Dynamic Routing and 404
+## [ ] MMS-11 Dynamic Routing and 404
 
 - Branch: feat/mmsns-10-dynamic-routing-and-404
 - User Story: As a user, I should see a custom 404 page when I enter an unused URL on the site. As an editor, I should be able to create a page on the site without having to add a page to the `/app` directory.
@@ -128,7 +138,7 @@
 
 ---
 
-## [ ] MMS-11 Search Feature
+## [ ] MMS-12 Search Feature
 
 - Branch: feat/mmsns-11-static-search
 - User Story: As a user, I should have the ability to search all content types.
