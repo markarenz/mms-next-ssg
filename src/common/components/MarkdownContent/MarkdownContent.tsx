@@ -8,12 +8,14 @@ interface Props {
 }
 
 const MarkdownContent: React.FC<Props> = ({ content, inline }) => {
-  const contentParsed = marked.parse(content);
+  const contentParsed = inline ? marked.parseInline(content) : marked.parse(content);
+
   const contentSanitized = DOMPurify.sanitize(`${contentParsed}`);
+
   return (
     <div
       data-testid="markdown-content"
-      className={`markdown ${inline ? 'inline' : ''}`}
+      className="markdown"
       dangerouslySetInnerHTML={{ __html: contentSanitized }}
     />
   );

@@ -61,14 +61,25 @@
   }
 }
 
-@mixin text-variant-headline-md {
+@mixin text-variant-headline-lg {
   font-family: var(--font-headline);
   font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 100;
+  margin: 0;
+  @media (min-width: var(--breakpoint-tablet-portrait)) {
+    font-size: 3rem;
+  }
+}
+
+@mixin text-variant-headline-md {
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
   line-height: 1.1;
   font-weight: 100;
   margin: 0;
   @media (min-width: var(--breakpoint-tablet-portrait)) {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 

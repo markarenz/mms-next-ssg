@@ -25,18 +25,18 @@ const OneCol: React.FC<Props> = ({ section }) => {
     return null;
   }
 
-  const align = `align-${getValidValueOrDefault(
+  const alignClass = `align-${getValidValueOrDefault(
     section.align,
     ['left', 'right', 'center'],
     'left',
   )}`;
-  const variant = `variant-${getValidValueOrDefault(
+  const variantClass = `variant-${getValidValueOrDefault(
     section.variant,
     ['default', 'dark', 'primary'],
     'default',
   )}`;
 
-  const classes = `${styles.root} ${styles[variant]} ${styles[align]}`;
+  const classes = `${styles.root} ${styles[variantClass]} ${styles[alignClass]}`;
 
   return (
     <section className={classes} data-testid="cms-one-col">
