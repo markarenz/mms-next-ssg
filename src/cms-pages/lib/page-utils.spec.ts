@@ -1,5 +1,5 @@
 import { CmsPage } from '@/cms-pages/interfaces/pages';
-import { getPageDetail, getPageMetadata } from './page-utils';
+import { getPageDetail, getPageMetadata, getGenericMetadata } from './page-utils';
 
 describe('getPageDetail', () => {
   it('returns page detail and CMS section blocks', () => {
@@ -21,13 +21,25 @@ describe('getPageMetadata', () => {
     image: 'image.jpg',
     datePublished: '2024-01-01',
     header: 'header-default',
-    footer: 'footer-default',
     sections: ['test'],
   };
   it('returns metas for page object', () => {
     const result = getPageMetadata(mockPage);
     expect(result.description).toEqual(mockPage.metaDescription);
-    expect(result.openGraph.title).toEqual(mockPage.title);
+    expect(result.title).toEqual(mockPage.title);
     expect(result.openGraph.images.length).toBeGreaterThan(0);
+  });
+});
+
+describe('getGenericMetadata', () => {
+  it('returns metas for generic page', () => {
+    const result = getGenericMetadata('Test Title', 'This is my meta');
+    expect(result.title).toEqual('Test Title');
+    expect(result.description).toEqual('This is my meta');
+    expect(result.openGraph.images).toBeTruthy();
+  });
+  it('returns metas for generic page with image', () => {
+    const result = getGenericMetadata('Test Title', 'This is my meta', '/posts/2.jpeg');
+    expect(result.openGraph.images[0].includes('2.jpeg')).toBe(true);
   });
 });

@@ -12,6 +12,7 @@ type Props = {
   isBgImage?: boolean;
   isShaded?: boolean;
   focalPoint?: string;
+  className?: string;
 };
 
 const CmsImage: React.FC<Props> = ({
@@ -20,6 +21,7 @@ const CmsImage: React.FC<Props> = ({
   width,
   height,
   style,
+  className,
   isLazyLoading = true,
   focalPoint = 'center center',
   isBgImage = false,
@@ -31,7 +33,7 @@ const CmsImage: React.FC<Props> = ({
   return isBgImage ? (
     <div
       data-testid="cms-bg-image"
-      className={`${styles.root} ${isShaded ? styles.shaded : ''}`}
+      className={`${styles.root} ${className ? className : ''} ${isShaded ? styles.shaded : ''}`}
       style={{
         backgroundImage: `url(${imageCdnUrl})`,
         backgroundPosition: focalPoint,
@@ -42,6 +44,7 @@ const CmsImage: React.FC<Props> = ({
     <img
       data-testid="cms-image"
       src={imageCdnUrl}
+      className={`responsive ${className ? className : ''}`}
       alt={alt}
       loading={isLazyLoading ? 'lazy' : 'eager'}
       {...(style ? { style } : {})}

@@ -1,5 +1,5 @@
 import { CmsPage, CmsSection } from '@/cms-pages/interfaces/pages';
-import { CONTENT_TYPES, CONTENT_DEFAULTS } from '../../common/lib/constants';
+import { CONTENT_TYPES, CONTENT_DEFAULTS, DEFAULT_METADATA } from '@/common/lib/constants';
 import { getContentDetail } from '../../common/lib/common-utils/common-utils';
 import { getImageCdnUrl } from '../../common/lib/image-utils/image-utils';
 
@@ -39,19 +39,36 @@ export const getPageDetail = (slug: string): CmsPage => {
   };
 };
 
-export const getPageMetadata = (page: CmsPage) => {
-  const { title, metaDescription, image } = page;
+export const getGenericMetadata = (title?: string, description?: string, image?: string) => {
+  const customMetadata: any = {};
+  let customImages = null;
+  if (image) {
+    customMetadata.openGraph = {
+      images: [{ url: getImageCdnUrl(image, 1024) }],
+    };
+  }
+  if (title) {
+    customMetadata.title = title;
+  }
+  if (description) {
+    customMetadata.description = description;
+  }
+  if (image) {
+    customImages = [getImageCdnUrl(image, 1024)];
+    customMetadata.openGraph.images = [getImageCdnUrl(image, 1024)];
+  }
 
   return {
-    title,
-    description: metaDescription,
+    ...DEFAULT_METADATA,
+    ...customMetadata,
     openGraph: {
-      locale: 'en_US',
-      type: 'website',
-      title,
-      site_name: 'Mark Makes Stuff',
-      description: metaDescription,
-      images: [getImageCdnUrl(image, 800)],
+      ...DEFAULT_METADATA.openGraph,
+      images: customImages ? customImages : DEFAULT_METADATA.openGraph?.images,
     },
   };
+};
+
+export const getPageMetadata = (page: CmsPage) => {
+  const { title, metaDescription, image } = page;
+  return getGenericMetadata(title, metaDescription, image);
 };

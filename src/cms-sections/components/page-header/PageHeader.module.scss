@@ -1,0 +1,164 @@
+@import '../../../styles/modulebase.scss';
+
+.root {
+  position: relative;
+  overflow-y: hidden;
+  margin-bottom: -2px;
+  .bgWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .bgWrapper {
+    &.texture {
+      position: absolute;
+      max-height: 100%;
+      overflow-y: hidden;
+      opacity: 0.5;
+      background-attachment: fixed;
+      background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(175)'><path d='M20-5V5m0 30v10m20-30v10M0 15v10'  stroke-linejoin='round' stroke-linecap='round' stroke-width='0.5' stroke='%23f35a17' fill='none'/><path d='M-5 40H5M-5 0H5m30 0h10M35 40h10M15 20h10'  stroke-linejoin='round' stroke-linecap='round' stroke-width='0.5' stroke='%23f35a17' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,-30)' fill='url(%23a)'/></svg>");
+    }
+  }
+  .bgGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      rgba(10, 10, 10, 0.75),
+      rgba(10, 10, 10, 0.5),
+      rgba(10, 10, 10, 0)
+    );
+  }
+
+  .inner {
+    padding: 220px 0 180px 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    @include text-variant-headline-xl;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    @include text-variant-subhead-xl;
+    margin-bottom: 1rem;
+  }
+  .subNav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    .subNavLinks {
+      font-size: 2rem;
+      font-family: var(--font-headline);
+      font-weight: 100;
+      position: relative;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      &:after {
+        position: absolute;
+        right: -1rem;
+        top: 0;
+        display: block;
+        content: ' ';
+        width: 1px;
+        border-right: 2px dashed var(--color-main-bg);
+        height: 100%;
+      }
+      &:last-of-type {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &.line-top {
+      top: 10px;
+    }
+    polygon {
+      fill: var(--color-main-bg);
+    }
+    line {
+      stroke: var(--color-main-bg);
+      stroke-width: 2px;
+    }
+  }
+  .svg-box-top {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    svg {
+      line {
+        stroke-width: 4px;
+      }
+    }
+  }
+  .svg-box-bottom {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &.shaded {
+    &:after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(50, 50, 50, 0.5);
+    }
+  }
+  &.variantLight {
+    background-color: var(--color-gray-darkest);
+    svg {
+      polygon {
+        fill: var(--color-gray-lightest);
+      }
+    }
+    .imgBg {
+      mix-blend-mode: luminosity;
+      opacity: 0.3;
+    }
+  }
+  &.variantDark {
+    background-color: var(--color-gray-darkest);
+    svg {
+      polygon {
+        fill: var(--color-gray-dark);
+      }
+    }
+    .imgBg {
+      mix-blend-mode: luminosity;
+      opacity: 0.3;
+    }
+  }
+  &.variantPrimary {
+    svg {
+      polygon {
+        fill: var(--color-main-bg);
+      }
+    }
+  }
+}

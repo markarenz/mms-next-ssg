@@ -1,22 +1,19 @@
-import Link from 'next/link';
+import { Metadata } from 'next';
 import { getPosts } from '@/cms-posts/lib/post-utils';
-import PostListItem from '@/cms-posts/components/PostListItem/PostListItem';
+import { getMaxContentPagesByType } from '@/common/lib/common-utils/common-utils';
+import { CONTENT_TYPES, DEFAULT_IMAGES } from '@/common/lib/constants';
+import PostListPageContent from '@/cms-posts/components/PostListPageContent/PostListPageContent';
+import { getGenericMetadata } from '@/cms-pages/lib/page-utils';
 
+export async function generateMetadata(): Promise<Metadata> {
+  return getGenericMetadata(
+    `Mark Makes Stuff - Posts`,
+    'Blog posts by Mark Makes Stuff.',
+    DEFAULT_IMAGES.POSTS,
+  );
+}
 export default function PostsPage() {
   const posts = getPosts(0);
-
-  return (
-    <main data-testid="page-posts">
-      Posts Page
-      <Link href="/test">Home</Link>
-      <div>
-        {posts.map((post) => (
-          <PostListItem key={post.slug} post={post} />
-        ))}
-      </div>
-      <div>
-        <Link href="/posts/archive/1">See More</Link>
-      </div>
-    </main>
-  );
+  const maxPages = getMaxContentPagesByType(CONTENT_TYPES.POSTS);
+  return <PostListPageContent posts={posts} pageNum={0} maxPages={maxPages} />;
 }

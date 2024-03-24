@@ -56,7 +56,7 @@
 - User Story: As a user, I should be able to see the navigation and footer for every page. As a content editor, I should be able to swap out the header depending on the page.
 - [x] Build out global nav
 - [x] Add a header & footer slot to the CMS page structure to make it easy to swap them out
-- [x] Build a homepage header (content block: page-header-orange)
+- [x] Build a homepage header (content block: page-header)
 - [x] Build a footer
 - [x] Update/add tests
 
@@ -96,29 +96,36 @@
 
 ---
 
-## [ ] MMS-8 Content Blocks: Text Banner
+## [x] MMS-8 Content Blocks: Text Banner
 
 - Branch: feat/mmsns-8-content-blocks-text-banner
 - User Story: As a user, I should see the text banner matching the style of the design. As an editor, I should be able to set the variant, headline, and subhead.
 - ACs
-  - [ ] Create new text-banner section
-  - [ ] Update/add tests
+  - [x] Create new text-banner section
+  - [x] Update/add tests
 
 ---
 
-## [ ] MMS-9 Content Blocks: Post List
+## [x] MMS-9 Content Blocks: Post List
 
-- Branch: feat/mmsns-8-content-posts-list
+- Branch: feat/mmsns-9-content-posts-list
 - User Story: As a user, I should see the post list content block with content coming from the CMS. The items should link to detail pages for each item.
 - ACs
-  - [ ] Build out posts-list content block type and create content as needed
-  - [ ] Update/add tests
+
+  - [x] Get recent posts for homepage pre-render
+  - [x] Build out posts-list content block type and create content as needed
+  - [x] Style posts list page
+  - [x] Build out post detail page
+  - [x] Add styling to markdown and automatically set target and nofollow on external links
+  - [x] Port all posts from old system to new system
+  - [x] Set up SEO tags for posts
+  - [x] Update/add tests
 
 ---
 
 ## [ ] MMS-10 Content Blocks: Projects List
 
-- Branch: feat/mmsns-9-content-projects-list
+- Branch: feat/mmsns-10-content-projects-list
 - User Story: As a user, I should see the projects list content block with content coming from the CMS. The items should link to detail pages for each item.
 - ACs
   - [ ] Build out projects-list content block type and create content as needed
@@ -128,7 +135,7 @@
 
 ## [ ] MMS-11 Dynamic Routing and 404
 
-- Branch: feat/mmsns-10-dynamic-routing-and-404
+- Branch: feat/mmsns-11-dynamic-routing-and-404
 - User Story: As a user, I should see a custom 404 page when I enter an unused URL on the site. As an editor, I should be able to create a page on the site without having to add a page to the `/app` directory.
 - ACs
   - [ ] Create a catch-all page for dynamic routing and return 404 content when the page slug is not valid.
@@ -140,7 +147,7 @@
 
 ## [ ] MMS-12 Search Feature
 
-- Branch: feat/mmsns-11-static-search
+- Branch: feat/mmsns-12-static-search
 - User Story: As a user, I should have the ability to search all content types.
 - [ ] Write functions that create an index of words (3 letters or longer) as they appear in each item by content type.
 - [ ] Create a search page that uses the data created at build time to search through all pages live.

@@ -10,7 +10,7 @@ describe('PostsArchivePage', () => {
         }}
       />,
     );
-    const page = screen.getByTestId('page-posts-archive');
+    const page = screen.getByTestId('post-list-page-content');
     expect(page).toBeInTheDocument();
   });
 
@@ -22,7 +22,7 @@ describe('PostsArchivePage', () => {
         }}
       />,
     );
-    const page = screen.getByTestId('page-posts-archive');
+    const page = screen.getByTestId('post-list-page-content');
     expect(page).toBeInTheDocument();
   });
 });

@@ -11,8 +11,9 @@
 
   .link,
   .currentPage {
-    color: var(--color-gray-dark);
-    border: 1px solid var(--color-gray-dark);
+    background-color: transparent;
+    color: var(--color-gray-lightest);
+    border: 2px solid var(--color-gray-lightest);
     // padding: 0.75rem 1rem;
     font-size: 1rem;
     line-height: 1;
@@ -35,21 +36,20 @@
     }
   }
   .link {
-    background-color: var(--color-main-bg);
-    color: #fff;
+    background-color: var(--color-gray-light);
+    color: var(--color-gray-dark);
     text-decoration: none;
-    transition: var(--time-sm) background-color ease-in-out;
+    transition: var(--time-sm) all ease-in-out;
+    font-weight: bold;
     &:hover {
-      background-color: var(--color-gray-dark);
+      background-color: var(--color-main-bg);
+      color: var(--color-gray-lightest);
       animation: zoomPulse var(--time-md) normal forwards ease-in-out;
     }
   }
-  .currentPage {
-    font-weight: bold;
-  }
   .arrowButton {
-    border: 1px solid var(--color-gray-dark);
-    background-color: var(--color-gray-dark);
+    background-color: var(--color-gray-darkest);
+    border: 2px solid var(--color-gray-light);
     transition: var(--time-sm) background-color ease-in-out;
     &:hover {
       background-color: var(--color-main-bg);
@@ -61,6 +61,20 @@
       path {
         fill: #fff;
       }
+    }
+  }
+  .arrowIconLeft {
+    svg {
+      position: relative;
+      top: 2px;
+      left: -2px;
+    }
+  }
+  .arrowIconRight {
+    svg {
+      position: relative;
+      top: 2px;
+      left: 2px;
     }
   }
 }

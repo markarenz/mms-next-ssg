@@ -2,7 +2,13 @@ import React from 'react';
 
 const MMSLogoText = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 840 357" xmlSpace="preserve">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      viewBox="0 0 840 357"
+      xmlSpace="preserve"
+      data-testid="mms-logo-text"
+    >
       <path
         fill="#fff"
         strokeLinecap="round"
