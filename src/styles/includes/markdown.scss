@@ -1,20 +1,60 @@
 .markdown {
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
+  h2 {
+    @include text-variant-headline-lg;
+  }
+  h3 {
+    @include text-variant-subhead-main;
   }
 
   p {
     margin-bottom: 1rem;
+    line-height: 1.5;
   }
 
+  ol,
   ul {
     margin: 0;
     list-style-position: inside;
-    padding-top: 1rem;
+    padding: 0;
+    ol,
+    ul {
+      margin: 0.25rem 0;
+    }
     li {
+      line-height: 1.5;
       margin-bottom: 1rem;
       padding-left: 1rem;
     }
+  }
+  a {
+    display: inline-block;
+    font-weight: bold;
+    color: var(--color-gray-dark);
+  }
+  code {
+    color: var(--color-gray-darkest);
+    background-color: var(--color-gray-light);
+  }
+  pre {
+    background-color: var(--color-gray-dark);
+    padding: 1rem;
+    code {
+      background-color: transparent;
+      white-space: break-spaces;
+      color: var(--color-gray-light);
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+  }
+  .imgWrap {
+    text-align: center;
+  }
+  hr {
+    margin: 2rem 0;
+    background-color: transparent;
+    border-top: 2px dashed var(--color-gray);
   }
 }

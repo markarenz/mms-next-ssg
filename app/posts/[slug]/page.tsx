@@ -1,21 +1,23 @@
-import Link from 'next/link';
+import { Metadata } from 'next';
 import { getAllSlugsByType } from '@/common/lib/common-utils/common-utils';
 import { getPostDetail } from '@/cms-posts/lib/post-utils';
 import { CONTENT_TYPES } from '@/common/lib/constants';
-import MarkdownContent from '@/common/components/MarkdownContent/MarkdownContent';
-// import styles from '@/styles/modules/home.module.scss';
+import { getPostMetadata } from '@/cms-posts/lib/post-utils';
+import PostDetail from '@/cms-posts/components/PostDetail/PostDetail';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const slug = params?.slug;
+  return getPostMetadata(getPostDetail(slug, true));
+}
 
 export default function PostDetailPage({ params }: { params: { slug: string } }) {
   const slug = params?.slug;
-  const post = getPostDetail(slug);
-  return (
-    <main data-testid="page-post-detail">
-      Posts Detail
-      <Link href="/posts">Posts Archive</Link>
-      <h1>{post.title}</h1>
-      <MarkdownContent content={post.content} />
-    </main>
-  );
+  const post = getPostDetail(slug, true);
+  return <PostDetail post={post} />;
 }
 
 export async function generateStaticParams() {

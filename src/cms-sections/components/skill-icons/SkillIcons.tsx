@@ -43,7 +43,7 @@ const SkillIcons: React.FC<Props> = ({ section }) => {
   const headline = `${section.headline}`.replace('__YEARS__', `${new Date().getFullYear() - 1992}`);
 
   return (
-    <div className={styles.root} data-testid="skill-icons">
+    <section className={styles.root} data-testid="skill-icons">
       <div className="container">
         <div className={styles.experience}>
           <div className={styles.yearsCol}>
@@ -90,7 +90,14 @@ const SkillIcons: React.FC<Props> = ({ section }) => {
           ))}
         </div>
       </div>
-    </div>
+      <div className={styles.bottomDeco}>
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="60">
+          <polygon fillOpacity="0.25" points="0,0 0,100 100,0" />
+          <polygon fillOpacity="0.5" points="0,0 0,65 90,0" />
+          <polygon points="0,0 0,30 70,0" />
+        </svg>
+      </div>
+    </section>
   );
 };
 

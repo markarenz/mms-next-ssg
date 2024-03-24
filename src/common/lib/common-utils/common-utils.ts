@@ -27,7 +27,7 @@ export const getContentDetail = (type: string, slug: string, subPath?: string): 
 };
 
 export const getMaxContentPagesByType = (type: string): number => {
-  return Math.ceil(getAllSlugsByType(type).length / postsPerPage) - 1;
+  return Math.ceil(getAllSlugsByType(type).length / postsPerPage);
 };
 
 export const getArrFromRange = (start: number, stop: number, step: number): number[] =>

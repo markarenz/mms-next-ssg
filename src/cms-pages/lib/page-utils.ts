@@ -1,5 +1,5 @@
 import { CmsPage, CmsSection } from '@/cms-pages/interfaces/pages';
-import { CONTENT_TYPES, CONTENT_DEFAULTS } from '../../common/lib/constants';
+import { CONTENT_TYPES, CONTENT_DEFAULTS, DEFAULT_IMAGES } from '../../common/lib/constants';
 import { getContentDetail } from '../../common/lib/common-utils/common-utils';
 import { getImageCdnUrl } from '../../common/lib/image-utils/image-utils';
 
@@ -55,3 +55,16 @@ export const getPageMetadata = (page: CmsPage) => {
     },
   };
 };
+
+export const getGenericMetadata = (title: string, metaDescription: string, image?: string) => ({
+  title,
+  description: metaDescription,
+  openGraph: {
+    locale: 'en_US',
+    type: 'website',
+    title,
+    site_name: 'Mark Makes Stuff',
+    description: metaDescription,
+    images: [getImageCdnUrl(image || DEFAULT_IMAGES.MAIN, 800)],
+  },
+});

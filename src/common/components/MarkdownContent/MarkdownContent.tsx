@@ -8,9 +8,23 @@ interface Props {
 }
 
 const MarkdownContent: React.FC<Props> = ({ content, inline }) => {
-  const contentParsed = inline ? marked.parseInline(content) : marked.parse(content);
+  const renderer = new marked.Renderer();
+  const linkRenderer = renderer.link;
+  renderer.image = (href, title, text) => {
+    return `<div class="imgWrap"><img src="${href}" alt="${text}" title="${title}" /></div>`;
+  };
+  renderer.link = (href, title, text) => {
+    const isExternalLink = href.startsWith('http');
+    const html = linkRenderer.call(renderer, href, title, text);
+    return isExternalLink
+      ? html.replace(/^<a /, `<a target="_blank" rel="noreferrer noopener nofollow" `)
+      : html;
+  };
+  const contentParsed = inline
+    ? marked.parseInline(content, { renderer })
+    : marked.parse(content, { renderer });
 
-  const contentSanitized = DOMPurify.sanitize(`${contentParsed}`);
+  const contentSanitized = DOMPurify.sanitize(`${contentParsed}`, { ADD_ATTR: ['target'] });
 
   return (
     <div

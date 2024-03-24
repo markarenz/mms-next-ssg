@@ -4,9 +4,9 @@ function MMSLogo() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      data-name="Layer 1"
       version="1.1"
       viewBox="0 0 356.95 356.95"
+      data-testid="mms-logo"
     >
       <rect fill="#fff" x="0" y="0" width="356.95" height="356.95" />
       <path

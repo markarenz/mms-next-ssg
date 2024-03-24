@@ -12,19 +12,18 @@ type Props = {
 };
 
 const Pagination: React.FC<Props> = ({ pageNum, maxPages, contentType }) => {
-  const pagesBeforeAfter = 3;
+  const pagesBeforeAfter = 5;
   const { baseRoute, archiveRoute } = CONTENT_ROUTES[contentType];
 
   const getLinkRoute = (p: number) => (p === 0 ? baseRoute : `${archiveRoute}${p}`);
 
   // archive pages should NOT start with 1 they should start with 2?
-  // before
   const firstVisiblePage = Math.max(pageNum - pagesBeforeAfter, 1);
-  const lastVisiblePage = Math.min(pageNum + pagesBeforeAfter, maxPages);
+  const lastVisiblePage = Math.min(pageNum + pagesBeforeAfter, maxPages) - 1;
   const showBeforeEllipses = firstVisiblePage > 1;
   const showAfterEllipses = lastVisiblePage < maxPages;
   const showPrevButton = pageNum > 0;
-  const showNextButton = pageNum < maxPages;
+  const showNextButton = pageNum < maxPages - 1;
   const pagesBefore = getArrFromRange(firstVisiblePage, pageNum - 1, 1);
   const pagesAfter = getArrFromRange(pageNum + 1, lastVisiblePage, 1);
 
@@ -32,8 +31,12 @@ const Pagination: React.FC<Props> = ({ pageNum, maxPages, contentType }) => {
     <div data-testid="pagination" className={styles.root}>
       <div className={styles.stage}>
         {showPrevButton ? (
-          <Link href={getLinkRoute(pageNum - 1)} aria-label="Previous Page">
-            <div data-testid="pagination-prev-link" className={styles.arrowButton}>
+          <Link
+            href={getLinkRoute(pageNum - 1)}
+            aria-label="Previous Page"
+            className={styles.arrowButton}
+          >
+            <div data-testid="pagination-prev-link" className={styles.arrowIconLeft}>
               <IconTriangle direction="left" />
             </div>
           </Link>
@@ -54,8 +57,12 @@ const Pagination: React.FC<Props> = ({ pageNum, maxPages, contentType }) => {
         ))}
         {showAfterEllipses && <span>...</span>}
         {showNextButton ? (
-          <Link href={getLinkRoute(pageNum + 1)} aria-label="Next Page">
-            <div data-testid="pagination-next-link" className={styles.arrowButton}>
+          <Link
+            href={getLinkRoute(pageNum + 1)}
+            aria-label="Next Page"
+            className={styles.arrowButton}
+          >
+            <div data-testid="pagination-next-link" className={styles.arrowIconRight}>
               <IconTriangle direction="right" />
             </div>
           </Link>

@@ -4,6 +4,5 @@ export interface CmsPost {
   image: string;
   datePublished: string;
   metaDescription: string;
-  excerpt: string;
   content: string;
 }

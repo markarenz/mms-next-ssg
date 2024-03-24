@@ -21,4 +21,28 @@ describe('CmsImage', () => {
     const element = screen.getByTestId('cms-bg-image');
     expect(element).toBeInTheDocument();
   });
+
+  it('includes a className if provided', () => {
+    render(
+      <CmsImage
+        src="default-image.jpg"
+        alt="Image Alt"
+        width={300}
+        style={{ paddingTop: 10 }}
+        className="test"
+      />,
+    );
+    const element = screen.getByTestId('cms-image');
+    const className = element.getAttribute('class') || '';
+    expect(className.includes('test')).toBeTruthy();
+  });
+
+  it('includes no className if one is not provided', () => {
+    render(
+      <CmsImage src="default-image.jpg" alt="Image Alt" width={300} style={{ paddingTop: 10 }} />,
+    );
+    const element = screen.getByTestId('cms-image');
+    const className = element.getAttribute('class') || '';
+    expect(className.includes('test')).toBeFalsy();
+  });
 });

@@ -38,3 +38,8 @@ Use `npm run build` or `npm run build:deploy` to distribute the project. Change 
 Additionally, your S3 bucket will need open permissions, a bucket policy to allow object access, and web hosting enabled from the properties menu in the AWS console.
 
 Create an SSL cert for your domain, and use it in a CloudFront distribution that points to your S3 bucket. Use Route53 to connect your distribution to your domain. Be sure to provide A as well as AAAA records. Without the AAAA record, some devices that work best with IPV6, such as mobile devices, may not work properly.
+
+## Projects and Posts
+
+- Images for these content types should be 1920 x 700
+- The image CDN will provide the thumbnail images on the fly

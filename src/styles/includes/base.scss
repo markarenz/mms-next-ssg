@@ -51,7 +51,7 @@ select,
 }
 
 *:focus {
-  outline-color: pink;
+  outline-color: var(--color-main-bg-light);
 }
 
 .hover-zoom {
@@ -77,4 +77,16 @@ select,
 .bg {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+.itemsWrap {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  @include for-tablet-portrait-up {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include for-desktop-up {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

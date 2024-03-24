@@ -1,6 +1,6 @@
 import { ContentRoute } from '@/common/interfaces/app';
 
-export const postsPerPage = 3;
+export const postsPerPage = 8;
 
 export const CONTENT_TYPES = {
   POSTS: 'posts',
@@ -32,3 +32,8 @@ export const delayClasses = [
   'trans-delay-1',
   'trans-delay-1-25',
 ];
+
+export const DEFAULT_IMAGES = {
+  MAIN: '/mms-default.jpg',
+  POSTS: '/pages/mms-page-headers-02.jpg',
+};

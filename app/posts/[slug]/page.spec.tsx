@@ -6,7 +6,7 @@ describe('PostDetailPage', () => {
     render(
       <PostDetailPage
         params={{
-          slug: 'post1',
+          slug: 'games-react',
         }}
       />,
     );

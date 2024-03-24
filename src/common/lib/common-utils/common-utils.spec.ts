@@ -20,7 +20,7 @@ describe('getAllSlugsByType', () => {
 
 describe('getContentDetail', () => {
   it('returns content detail object based on slug and type if it exists', () => {
-    const result = getContentDetail(CONTENT_TYPES.POSTS, 'post1');
+    const result = getContentDetail(CONTENT_TYPES.POSTS, 'games-react');
     expect(result?.data?.title).toBeTruthy();
   });
 
@@ -38,7 +38,7 @@ describe('getMaxContentPagesByType', () => {
 
   it('returns 0 if type is invalid', () => {
     const result = getMaxContentPagesByType('test');
-    expect(result).toBe(-1);
+    expect(result).toBe(0);
   });
 });
 

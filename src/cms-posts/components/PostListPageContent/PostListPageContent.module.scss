@@ -1,0 +1,9 @@
+.root {
+  background-color: var(--color-gray-dark);
+  padding: 4rem 0 3rem 0;
+  .actionRow {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
