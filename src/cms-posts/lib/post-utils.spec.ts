@@ -1,3 +1,4 @@
+import { DEFAULT_METADATA } from '@/common/lib/constants';
 import { getPostDetail, getPosts, getPostMetadata } from './post-utils';
 
 describe('getPostDetail', () => {
@@ -39,13 +40,13 @@ describe('getPostMetadata', () => {
     const result = getPostMetadata(post);
     expect(result?.title || '').toBe(post.title);
     expect(result?.description || '').toBe(post.metaDescription);
-    expect(result?.openGraph.images[0] || '').toBeTruthy();
+    expect(result?.openGraph?.images).toBeTruthy();
   });
 
-  it('returns metadata for empty post', () => {
+  it('returns default metadata for empty post', () => {
     const post = {};
     // @ts-ignore
     const result = getPostMetadata(post);
-    expect(result).toBe(null);
+    expect(result.title).toEqual(DEFAULT_METADATA.title);
   });
 });

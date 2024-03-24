@@ -1,11 +1,12 @@
+import { Metadata } from 'next';
 import { CmsPost } from '@/cms-posts/interfaces/posts';
+import { getGenericMetadata } from '@/cms-pages/lib/page-utils';
 import {
   getAllSlugsByType,
   getContentDetail,
   getMaxContentPagesByType,
-} from '../../common/lib/common-utils/common-utils';
-import { getImageCdnUrl } from '@/common/lib/image-utils/image-utils';
-import { CONTENT_TYPES, postsPerPage } from '../../common/lib/constants';
+} from '@/common/lib/common-utils/common-utils';
+import { CONTENT_TYPES, postsPerPage } from '@/common/lib/constants';
 
 export const getPostDetail = (slug: string, isDetail: boolean): CmsPost => {
   const contentDetail = getContentDetail(CONTENT_TYPES.POSTS, slug);
@@ -35,23 +36,7 @@ export const getPosts = (pageNum: number): CmsPost[] => {
   return allPosts.slice(start, start + postsPerPage);
 };
 
-export const getPostMetadata = (post: CmsPost) => {
-  if (!post || !post.title || !post.metaDescription || !post.image) {
-    return null;
-  }
-
+export const getPostMetadata = (post: CmsPost): Metadata => {
   const { title, metaDescription, image } = post;
-
-  return {
-    title,
-    description: metaDescription,
-    openGraph: {
-      locale: 'en_US',
-      type: 'website',
-      title,
-      site_name: 'Mark Makes Stuff',
-      description: metaDescription,
-      images: [getImageCdnUrl(image, 800)],
-    },
-  };
+  return getGenericMetadata(title, metaDescription, image);
 };

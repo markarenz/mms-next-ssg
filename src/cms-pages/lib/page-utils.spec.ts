@@ -26,7 +26,7 @@ describe('getPageMetadata', () => {
   it('returns metas for page object', () => {
     const result = getPageMetadata(mockPage);
     expect(result.description).toEqual(mockPage.metaDescription);
-    expect(result.openGraph.title).toEqual(mockPage.title);
+    expect(result.title).toEqual(mockPage.title);
     expect(result.openGraph.images.length).toBeGreaterThan(0);
   });
 });
