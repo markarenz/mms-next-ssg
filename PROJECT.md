@@ -106,7 +106,7 @@
 
 ---
 
-## [ ] MMS-9 Content Blocks: Post List
+## [x] MMS-9 Content Blocks: Post List
 
 - Branch: feat/mmsns-9-content-posts-list
 - User Story: As a user, I should see the post list content block with content coming from the CMS. The items should link to detail pages for each item.
@@ -119,7 +119,7 @@
   - [x] Add styling to markdown and automatically set target and nofollow on external links
   - [x] Port all posts from old system to new system
   - [x] Set up SEO tags for posts
-  - [ ] Update/add tests
+  - [x] Update/add tests
 
 ---
 

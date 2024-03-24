@@ -13,7 +13,7 @@ The new editor focuses on content blocks, and creating customized blocks for spe
 
 Using the command line interface, scaffolding new blocks using ES6 is very easy- though it appears broken in the 5.0 release candidate. I'm looking forward to using this tool once it's up and running.
 
-I've done some tests in both these methods and the ACF version is dead easy, using many of the tried and true code blocks like custom get_posts arguments. Converting shortcode workhorses to Gutenberg blocks will be less of a hassle than many people imagined. It almost feels like cheating.
+I've done some tests in both these methods and the ACF version is dead easy, using many of the tried and true code blocks like custom get_posts arguments. Converting short-code workhorses to Gutenberg blocks will be less of a hassle than many people imagined. It almost feels like cheating.
 
 There has been a fair bit of grumbling that 5.0 was rushed out to coincide with the conference, and many of us will wait a week or so until 5.0.x comes out. Beyond that, it could be some time before we will be building sites with the new page editor. It will take time to build our custom block library and find a stable of trusted plugins for blocks. It may also be some time before Gutenberg is as powerful as other page editors such as WPBakery, which, incidentally, still works beautifully in 5.0.
 

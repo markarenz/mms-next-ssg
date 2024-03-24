@@ -9,7 +9,7 @@ _Headless Laravel might sound like the future, but for me, it's the "right now."
 
 **I love WordPress.** I've been making WordPress sites for about 10 years, and for the most part, it's been really gratifying. This plucky little blog-engine-turned-CMS has come a long way. It's grown so popular that about a third of the visible Internet is running WordPress in one form or another. It's huge, and we as a community should feel very proud to have been a part of the "WordPress Movement."
 
-The ecosystem is unrivaled, a vast expanse of helpful tools, plugins and themes. Now, of course, some of these free chunks of code are laughably broken or, worse, pesky infosec time-bombs waiting for you to go on vacation before some bored Russian teenager rewrites every record in your database with One Direction lyrics.
+The ecosystem is unrivaled, a vast expanse of helpful tools, plugins and themes. Now, of course, some of these free chunks of code are laughably broken or, worse, pesky info-sec time-bombs waiting for you to go on vacation before some bored Russian teenager rewrites every record in your database with One Direction lyrics.
 
 Naturally, WordPress' wild popularity contributes significantly to one of its biggest problems: the target on its back. WordPress projects need more maintenance than most other CMS-driven sites. They require weekly or daily updates to keep the devil from your front door. And even when you do, you can run into a botched [Easy WP SMTP update](https://nakedsecurity.sophos.com/2019/03/25/update-now-wordpress-hackers-target-easy-wp-smtp-plugin/) that gives everyone and their brother full admin access.
 
