@@ -6,13 +6,17 @@ import styles from './ContentListItem.module.scss';
 
 type Props = {
   summary: ContentSummary;
+  variant?: string;
 };
 
-const ContentListItem: React.FC<Props> = ({ summary }) => {
+const variants = ['default', 'dark'];
+
+const ContentListItem: React.FC<Props> = ({ summary, variant }) => {
+  const variantClass = variant && variants.includes(variant) ? styles[variant] : styles.default;
   const { title, image, href } = summary;
 
   return (
-    <Link href={href} className={styles.root} data-testid="content-list-item">
+    <Link href={href} className={`${styles.root} ${variantClass}`} data-testid="content-list-item">
       <CmsImage
         alt={`Background for posts`}
         isBgImage

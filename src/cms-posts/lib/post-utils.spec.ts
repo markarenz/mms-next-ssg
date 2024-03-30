@@ -1,5 +1,6 @@
 import { DEFAULT_METADATA } from '@/common/lib/constants';
-import { getPostDetail, getPosts, getPostMetadata } from './post-utils';
+import { getPostDetail, getPosts, getPostMetadata, mapSummaryFromPost } from './post-utils';
+import { mockPost } from './mocks/mockPost';
 
 describe('getPostDetail', () => {
   it('returns post detail by slug', () => {
@@ -48,5 +49,18 @@ describe('getPostMetadata', () => {
     // @ts-ignore
     const result = getPostMetadata(post);
     expect(result.title).toEqual(DEFAULT_METADATA.title);
+  });
+});
+
+describe('mapSummaryFromPost', () => {
+  it('returns summary', () => {
+    const result = mapSummaryFromPost(mockPost);
+    expect(result).toEqual({
+      href: '/posts/test-post',
+      image: 'posts/49.jpeg',
+      slug: 'test-post',
+      title: 'Test Post Title',
+      type: 'post',
+    });
   });
 });

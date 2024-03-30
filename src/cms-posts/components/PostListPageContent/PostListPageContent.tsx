@@ -3,7 +3,7 @@ import { CmsPost } from '@/cms-posts/interfaces/posts';
 import PageHeader from '@/cms-sections/components/page-header/PageHeader';
 import ButtonLink from '@/common/components/ButtonLink/ButtonLink';
 import ContentListItem from '@/common/components/ContentListItem/ContentListItem';
-import { mapSummaryFromPost } from '@/cms-posts/lib/utils';
+import { mapSummaryFromPost } from '@/cms-posts/lib/post-utils';
 import Footer from '@/common/components/Footer/Footer';
 import styles from './PostListPageContent.module.scss';
 import { CONTENT_TYPES, DEFAULT_IMAGES } from '@/common/lib/constants';

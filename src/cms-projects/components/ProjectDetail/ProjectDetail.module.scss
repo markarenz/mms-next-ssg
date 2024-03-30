@@ -1,0 +1,111 @@
+@import '../../../styles/modulebase.scss';
+
+.root {
+  background-color: var(--color-gray-lightest);
+  padding: 2rem 0;
+}
+.contentWrap {
+  margin-bottom: 2rem;
+}
+.actionRow {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.gridContainer {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr;
+  margin-bottom: 2rem;
+  @include for-tablet-portrait-up {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+.imagesList {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr;
+  .imageLink {
+    cursor: pointer;
+    .imageLinkImgWrap {
+      transform: scale(1);
+      transition: var(--time-sm) transform ease;
+    }
+    &:hover {
+      .imageLinkImgWrap {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.lightbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  &.active {
+    // TEST
+    opacity: 1;
+    pointer-events: all;
+  }
+  .lightboxImage {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  .bouncyButton {
+    transition: var(--time-sm) all ease-in-out;
+    border-radius: 100%;
+    svg {
+      path {
+        transition: var(--time-sm) fill ease-in-out;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: var(--color-main-bg);
+        }
+      }
+      animation: zoomPulse var(--time-md) normal forwards ease-in-out;
+    }
+  }
+  .btnClose {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+  }
+  .btnNavPrev {
+    position: absolute;
+    top: calc(50% - 2rem);
+    left: 1rem;
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+  }
+  .btnNavNext {
+    position: absolute;
+    top: calc(50% - 2rem);
+    right: 1rem;
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+  }
+}

@@ -8,6 +8,12 @@ describe('Button', () => {
     expect(buttonElement).toBeInTheDocument();
   });
 
+  it('renders variant', () => {
+    render(<Button label="Test" variant="dark" onClick={() => {}} />);
+    const buttonElement = screen.getByTestId('button');
+    expect(buttonElement.classList).toContain('dark');
+  });
+
   it('handles click', () => {
     const onClick = jest.fn();
     render(<Button label="Test" onClick={onClick} />);
