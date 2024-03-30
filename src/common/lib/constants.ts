@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import { ContentRoute } from '@/common/interfaces/app';
 
-export const postsPerPage = 8;
+export const itemsPerPage = 12;
 
 export const CONTENT_TYPES = Object.freeze({
   POSTS: 'posts',
   PAGES: 'pages',
+  PROJECTS: 'projects',
 });
 
 export const CONTENT_DEFAULTS = Object.freeze({
@@ -20,6 +21,10 @@ export const CONTENT_ROUTES: { [key: string]: ContentRoute } = {
   posts: {
     baseRoute: '/posts/',
     archiveRoute: '/posts/archive/',
+  },
+  projects: {
+    baseRoute: '/projects/',
+    archiveRoute: '/projects/archive/',
   },
 };
 
@@ -37,6 +42,7 @@ export const delayClasses = [
 export const DEFAULT_IMAGES = Object.freeze({
   MAIN: '/mms-default.jpg',
   POSTS: '/pages/mms-page-headers-02.jpg',
+  PROJECTS: '/pages/mms-page-headers-02.jpg',
 });
 
 export const DEFAULT_METADATA: Metadata = Object.freeze({

@@ -1,7 +1,7 @@
 import { join } from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { postsPerPage } from '../constants';
+import { itemsPerPage } from '../constants';
 
 export const getContentDirectoryByType = (type: string, subPath?: string) =>
   join(process.cwd(), `_content/${type}${subPath ? `/${subPath}` : ''}`);
@@ -27,7 +27,7 @@ export const getContentDetail = (type: string, slug: string, subPath?: string): 
 };
 
 export const getMaxContentPagesByType = (type: string): number => {
-  return Math.ceil(getAllSlugsByType(type).length / postsPerPage);
+  return Math.ceil(getAllSlugsByType(type).length / itemsPerPage);
 };
 
 export const getArrFromRange = (start: number, stop: number, step: number): number[] =>

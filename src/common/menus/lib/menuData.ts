@@ -2,7 +2,7 @@ import { MenuItem } from '../interfaces/menu';
 
 export const navMenuItems: MenuItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'Work', href: '/work' },
+  { label: 'Work', href: '/projects' },
   { label: 'Blog', href: '/posts' },
   { label: 'Bio', href: '/bio' },
 ];

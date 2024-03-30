@@ -1,6 +1,7 @@
 import React from 'react';
 import { CmsPage } from '@/cms-pages/interfaces/pages';
 import { CmsPost } from '@/cms-posts/interfaces/posts';
+import { CmsProject } from '@/cms-projects/interfaces/projects';
 import CmsPageSection from './CmsPageSection';
 import Footer from '@/common/components/Footer/Footer';
 
@@ -8,6 +9,7 @@ type Props = {
   page: CmsPage;
   data?: {
     posts?: CmsPost[];
+    projects: CmsProject[];
   };
 };
 

@@ -11,7 +11,11 @@
   padding: 0.5rem 1rem;
   font-family: var(--font-headline);
   background-color: var(--color-main-bg);
+  &.dark {
+    background-color: var(--color-gray-dark);
+  }
   text-decoration: none;
+  text-align: center;
   span {
     position: relative;
     text-transform: uppercase;
@@ -29,6 +33,9 @@
     opacity: 0.3;
     transition: 0.2s all ease;
     background-color: white;
+  }
+  &.dark:before {
+    opacity: 0.8;
   }
   &:hover {
     span {

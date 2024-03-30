@@ -2,7 +2,7 @@ import { CmsSection } from '@/cms-pages/interfaces/pages';
 import { CmsPost } from '@/cms-posts/interfaces/posts';
 import React from 'react';
 import ContentListItem from '@/common/components/ContentListItem/ContentListItem';
-import { mapSummaryFromPost } from '@/cms-posts/lib/utils';
+import { mapSummaryFromPost } from '@/cms-posts/lib/post-utils';
 import styles from './PostsList.module.scss';
 import ButtonLink from '@/common/components/ButtonLink/ButtonLink';
 
