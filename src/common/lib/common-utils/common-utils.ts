@@ -32,3 +32,52 @@ export const getMaxContentPagesByType = (type: string): number => {
 
 export const getArrFromRange = (start: number, stop: number, step: number): number[] =>
   Array.from({ length: (stop - start) / step + 1 }, (value, index) => start + index * step);
+
+export const cleanIndexText = (text: string): string => {
+  return text
+    .replace(/[.,/#!$%^&*;:?{}=\-_`~()]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
+};
+
+export const getContentIndex = (contentType: string, getDetail: Function, mapSummary: Function) => {
+  const slugs = getAllSlugsByType(contentType);
+  const allContentDetail: any = {};
+  const contentIndexRaw: { [key: string]: number } = {};
+  slugs.forEach((slug) => {
+    const item = getDetail(slug, true);
+    allContentDetail[`${slug}`] = item;
+    const words = cleanIndexText(`${item.title} - ${item.content}`)
+      .split(' ')
+      .filter((word) => word.length > 3);
+    words.forEach((word) => {
+      const key = `${word}__${slug}`;
+      if (!contentIndexRaw[key]) {
+        contentIndexRaw[key] = 1;
+      } else {
+        contentIndexRaw[key] += 1;
+      }
+    });
+  });
+  const contentIndex: { [key: string]: { slug: string; count: number }[] } = {};
+  Object.keys(contentIndexRaw).forEach((key) => {
+    const [word, slug] = key.split('__');
+    const count = contentIndexRaw[key];
+    if (!contentIndex[word]) {
+      contentIndex[word] = [];
+    }
+    const summary = mapSummary(allContentDetail[slug]);
+    contentIndex[word].push({ slug, count, ...summary });
+  });
+  const sortedContentIndex: any = {};
+  Object.keys(contentIndex).forEach((key) => {
+    sortedContentIndex[key] = contentIndex[key].sort((a, b) => {
+      return b.count - a.count;
+    });
+  });
+
+  // allContentDetail // mapSummary
+
+  return sortedContentIndex;
+};

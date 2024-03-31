@@ -32,6 +32,7 @@ const PostListPageContent: React.FC<Props> = ({ posts, pageNum, maxPages, breadc
           image1: DEFAULT_IMAGES.POSTS,
           headline: 'Posts',
           variant: 'dark',
+          searchType: 'posts',
         }}
       />
 

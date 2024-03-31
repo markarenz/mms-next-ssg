@@ -14,6 +14,35 @@
     overflow-x: hidden;
     overflow-y: hidden;
   }
+  .searchIconWrap {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    a {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 100%;
+    }
+    svg {
+      width: 3rem;
+      height: 3rem;
+      path {
+        fill: var(--color-gray-light);
+      }
+    }
+  }
+  .bouncyButton {
+    width: 3rem;
+    height: 3rem;
+    transition: var(--time-sm) all ease-in-out;
+    opacity: 0.7;
+    &:hover {
+      animation: zoomPulse var(--time-md) normal forwards ease-in-out;
+      opacity: 1;
+    }
+  }
+
   .bgWrapper {
     &.texture {
       position: absolute;
@@ -47,6 +76,10 @@
   h1 {
     @include text-variant-headline-xl;
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: col;
+    justify-content: space-between;
+    align-items: center;
   }
   h2 {
     @include text-variant-subhead-xl;

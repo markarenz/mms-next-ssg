@@ -169,12 +169,13 @@
 
 ---
 
-## [ ] MMS-14 Search Feature
+## [x] MMS-14 Search Feature
 
 - Branch: feat/mmsns-14-static-search
 - User Story: As a user, I should have the ability to search for posts on the posts page and for projects on the projects page.
-- [ ] Write functions that create an index of words (3 letters or longer) as they appear in each item by content type.
-- [ ] Create a search page that uses the data created at build time to search through all pages live.
+- [x] Write functions that create an index of words (3 letters or longer) as they appear in each item by content type.
+- [x] Create search pages for posts & projects that uses the data created at build time to search through all pages live.
+- [x] Update/add tests
 
 ---
 

@@ -1,0 +1,55 @@
+@import '../../../styles//modulebase.scss';
+
+.root {
+  min-height: 80vh;
+  background-color: var(--color-gray-dark);
+  .breadcrumbWrap {
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .posts {
+    margin-bottom: 2rem;
+  }
+  .actionRow {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+  }
+  .searchInput {
+    margin-bottom: 2rem;
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      display: block;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      border: 1px solid var(--color-gray-light);
+      border-radius: 5px;
+    }
+  }
+  .itemsWrap {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    @include for-tablet-landscape-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    margin-bottom: 2rem;
+    .item {
+      a {
+        color: white;
+        font-size: 1.25rem;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .noResults {
+    padding: 1rem 0 2rem 0;
+    @include text-variant-subhead-main;
+    color: var(--color-gray-light);
+    text-align: center;
+  }
+}

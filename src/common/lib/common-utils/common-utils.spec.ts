@@ -1,9 +1,12 @@
+import { getPostDetail, mapSummaryFromPost } from '@/cms-posts/lib/post-utils';
 import {
   getAllSlugsByType,
   getArrFromRange,
   getContentDirectoryByType,
   getContentDetail,
   getMaxContentPagesByType,
+  cleanIndexText,
+  getContentIndex,
 } from './common-utils';
 import { CONTENT_TYPES } from '@/common/lib/constants';
 
@@ -53,5 +56,19 @@ describe('getContentDirectoryByType', () => {
   it('returns a content directory', () => {
     const result = getContentDirectoryByType(CONTENT_TYPES.POSTS);
     expect(result.split('/').slice(-1)[0]).toBe('posts');
+  });
+});
+
+describe('cleanIndexText', () => {
+  it('returns an cleaned text', () => {
+    const result = cleanIndexText('This is test content - with ! *Markdown* _and_ punctuation.?');
+    expect(result).toEqual('this is test content with markdown and punctuation');
+  });
+});
+
+describe('getContentIndex', () => {
+  it('returns an index of content', () => {
+    const result = getContentIndex(CONTENT_TYPES.POSTS, getPostDetail, mapSummaryFromPost);
+    expect(result).toBeTruthy();
   });
 });
