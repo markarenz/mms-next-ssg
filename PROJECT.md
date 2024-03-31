@@ -157,22 +157,22 @@
 
 ---
 
-## [ ] MMS-13 Dynamic Routing and 404
+## [x] MMS-13 Custom 404
 
-- Branch: feat/mmsns-13-dynamic-routing-and-404
-- User Story: As a user, I should see a custom 404 page when I enter an unused URL on the site. As an editor, I should be able to create a page on the site without having to add a page to the `/app` directory.
+- Branch: feat/mmsns-13-custom-404
+- User Story: As a user, I should see a custom 404 page when I enter an unused URL on the site.
 - ACs
-  - [ ] Create a catch-all page for dynamic routing and return 404 content when the page slug is not valid.
-  - [ ] Create a custom 404 page
-  - [ ] Check the current state of the site in S3 and make sure everything still works.
-  - [ ] Update/add tests
+  - [x] Refactor away from catch-all dynamic route since SSG will not permit this pattern to coexist with a 404 page.
+  - [x] Create a custom 404 page
+  - [x] Check the current state of the site in S3 and make sure everything still works.
+  - [x] Update/add tests
 
 ---
 
 ## [ ] MMS-14 Search Feature
 
 - Branch: feat/mmsns-14-static-search
-- User Story: As a user, I should have the ability to search all content types.
+- User Story: As a user, I should have the ability to search for posts on the posts page and for projects on the projects page.
 - [ ] Write functions that create an index of words (3 letters or longer) as they appear in each item by content type.
 - [ ] Create a search page that uses the data created at build time to search through all pages live.
 
