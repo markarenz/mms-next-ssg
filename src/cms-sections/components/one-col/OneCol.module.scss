@@ -17,6 +17,10 @@
     }
   }
 
+  p {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+  }
   &.variant-default {
     background-color: var(--color-gray-lightest);
     color: var(--color-gray-darkest);
@@ -27,6 +31,6 @@
   }
   &.variant-primary {
     background-color: var(--color-main-bg);
-    color: var(--color-gray-darkest);
+    color: white;
   }
 }

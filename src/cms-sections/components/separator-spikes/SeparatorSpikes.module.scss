@@ -29,10 +29,10 @@
   }
   &.spikesPrimary {
     &.directionUp {
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23f35a17' d='M 0,10 10,0 20,10 Z' /%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23d0460b' d='M 0,10 10,0 20,10 Z' /%3E%3C/svg%3E");
     }
     &.directionDown {
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23f35a17' d='M 0,0 10,10 20,0 Z' /%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23d0460b' d='M 0,0 10,10 20,0 Z' /%3E%3C/svg%3E");
     }
   }
   &.spikesDark {

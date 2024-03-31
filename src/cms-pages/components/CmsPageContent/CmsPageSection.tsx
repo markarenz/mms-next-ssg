@@ -8,6 +8,7 @@ import TextBanner from '@/cms-sections/components/text-banner/TextBanner';
 import PostsList from '@/cms-sections/components/posts-list/PostsList';
 import ProjectsList from '@/cms-sections/components/projects-list/ProjectsList';
 import SeparatorSpikes from '@/cms-sections/components/separator-spikes/SeparatorSpikes';
+import BreadcrumbSection from '@/cms-sections/components/breadcrumb-section/BreadcrumbSection';
 import { CmsSection } from '@/cms-pages/interfaces/pages';
 import { CmsPost } from '@/cms-posts/interfaces/posts';
 import { CmsProject } from '@/cms-projects/interfaces/projects';
@@ -35,6 +36,8 @@ const CmsPageSection: React.FC<Props> = ({ section, data }) => {
       return <TextBanner section={section} />;
     case 'skill-icons':
       return <SkillIcons section={section} />;
+    case 'breadcrumb-section':
+      return <BreadcrumbSection section={section} />;
     case 'posts-list':
       return <PostsList section={section} posts={data?.posts || []} />;
     case 'projects-list':

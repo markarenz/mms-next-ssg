@@ -1,0 +1,12 @@
+.root {
+  padding-top: 2rem;
+  &.primary {
+    background-color: var(--color-main-bg);
+  }
+  &.default {
+    background-color: var(--color-gray-lightest);
+  }
+  &.dark {
+    background-color: var(--color-gray-darker);
+  }
+}
