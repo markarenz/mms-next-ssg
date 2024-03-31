@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { getImageCdnUrl } from './image-utils/image-utils';
 import { ContentRoute } from '@/common/interfaces/app';
 
 export const itemsPerPage = 12;
@@ -45,6 +46,8 @@ export const DEFAULT_IMAGES = Object.freeze({
   PROJECTS: '/pages/mms-page-headers-02.jpg',
 });
 
+const defaultImg = getImageCdnUrl('/mms-default.jpg');
+
 export const DEFAULT_METADATA: Metadata = Object.freeze({
   title: 'Mark Arenz - Mark Makes Stuff',
   description:
@@ -56,9 +59,10 @@ export const DEFAULT_METADATA: Metadata = Object.freeze({
     siteName: 'Mark Makes Stuff',
     description:
       'Mark Arenz, an experienced software engineer crafting digital experiences for users in a variety of industries.',
+    image: '/mms-default.jpg',
     images: [
       {
-        url: '/mms-default.jpg',
+        url: defaultImg,
         width: 800,
         height: 600,
         alt: 'Mark Makes Stuff',

@@ -41,29 +41,26 @@ export const getPageDetail = (slug: string): CmsPage => {
 
 export const getGenericMetadata = (title?: string, description?: string, image?: string) => {
   const customMetadata: any = {};
-  let customImages = null;
-  if (image) {
-    customMetadata.openGraph = {
-      images: [{ url: getImageCdnUrl(image, 1024) }],
-    };
-  }
+
   if (title) {
     customMetadata.title = title;
   }
   if (description) {
     customMetadata.description = description;
   }
-  if (image) {
-    customImages = [getImageCdnUrl(image, 1024)];
-    customMetadata.openGraph.images = [getImageCdnUrl(image, 1024)];
-  }
+
+  customMetadata.twitter = {
+    title,
+    description,
+    image: image ? getImageCdnUrl(image, 1024) : null,
+  };
 
   return {
     ...DEFAULT_METADATA,
     ...customMetadata,
     openGraph: {
       ...DEFAULT_METADATA.openGraph,
-      images: customImages ? customImages : DEFAULT_METADATA.openGraph?.images,
+      images: image ? [getImageCdnUrl(image, 1024)] : DEFAULT_METADATA.openGraph?.images,
     },
   };
 };
