@@ -1,0 +1,37 @@
+@import './modulebase.scss';
+
+.root {
+  background-color: var(--color-gray-darker);
+  background: linear-gradient(0deg, rgba(31, 31, 31, 1) 0%, rgba(79, 79, 79, 1) 100%);
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .bgText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-headline);
+    font-size: 50vw;
+    line-height: 1;
+    opacity: 0.05;
+    color: white;
+  }
+  h1 {
+    font-size: 2rem;
+    @include for-desktop-up {
+      font-size: 5vw;
+    }
+    position: relative;
+    text-align: center;
+  }
+  .mainWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
