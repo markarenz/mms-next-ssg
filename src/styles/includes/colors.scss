@@ -1,8 +1,10 @@
 html {
-  --color-main-bg: #f35a17;
+  // Original Main Orange: #f35a17;
+  // --color-main-bg: hsl(18, 95%, 42%);
+  --color-main-bg: #d0460b;
   --color-main-bg-light: #ed6d37;
 
-  --color-main-rgba: rgba(243, 90, 23, 1);
+  --color-main-rgba: rgb(208, 70, 11);
   --color-main-rgba-transparent: rgba(243, 90, 23, 0);
 
   --color-near-white: #f8fafc;

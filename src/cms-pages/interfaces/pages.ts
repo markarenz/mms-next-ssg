@@ -1,3 +1,5 @@
+import { BreadCrumbItem } from '@/common/interfaces/app';
+
 export interface CmsSection {
   slug: string;
   type: string;
@@ -13,6 +15,7 @@ export interface CmsSection {
   align?: string;
   text1?: string;
   text2?: string;
+  breadcrumbs?: BreadCrumbItem[];
 }
 
 export interface CmsPage {

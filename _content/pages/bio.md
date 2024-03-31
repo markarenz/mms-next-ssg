@@ -6,6 +6,7 @@ metaDescription: A developer. A creative. A team lead. I've been making stuff wi
 header: header-bio
 sections:
   [
+    'bio-breadcrumbs',
     'bio-1',
     'bio-2-sep-top',
     'bio-2',
