@@ -3,7 +3,7 @@ import { getPageDetail, getPageMetadata, getGenericMetadata } from './page-utils
 
 describe('getPageDetail', () => {
   it('returns page detail and CMS section blocks', () => {
-    const result = getPageDetail('test');
+    const result = getPageDetail('home');
     expect(result.cmsSectionContent?.length).toBeGreaterThan(0);
   });
 

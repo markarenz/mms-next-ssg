@@ -11,7 +11,7 @@ type Props = {
   section: CmsSection;
 };
 const PageHeader: React.FC<Props> = ({ section }) => {
-  const { headline, subhead, image1 } = section;
+  const { headline, subhead, image1, slug } = section;
   const variant = section.variant || 'primary';
   const [isInitialized, setIsInitialized] = useState(false);
 
@@ -54,7 +54,7 @@ const PageHeader: React.FC<Props> = ({ section }) => {
             <h2 className={`anim-me anim-from-right ${isInitialized ? 'anim-in' : ''}`}>
               {subhead}
             </h2>
-            {variant === 'primary' && (
+            {slug === 'header-home' && (
               <div className={styles.subNav}>
                 {navMenuItems
                   .filter((item) => item.href !== '/')

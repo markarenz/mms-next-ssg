@@ -4,7 +4,7 @@ import PageHeader from './PageHeader';
 describe('PageHeader', () => {
   it('renders the PageHeader component', () => {
     const mockSection = {
-      slug: 'test-slug',
+      slug: 'header-home',
       type: 'page-header',
       image1: 'test.jpg',
       headline: 'Test Headline',
@@ -17,7 +17,7 @@ describe('PageHeader', () => {
 
   it('renders the PageHeader component', async () => {
     const mockSection = {
-      slug: 'test-slug',
+      slug: 'header-home',
       type: 'page-header',
       image1: 'test.jpg',
       headline: 'Test Headline',

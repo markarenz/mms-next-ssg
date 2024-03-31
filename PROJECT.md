@@ -146,14 +146,14 @@
 
 ---
 
-## [ ] MMS-12 Bio Page
+## [x] MMS-12 Bio Page
 
-- Branch: feat/mmsns-12-dynamic-routing-and-404
+- Branch: feat/mmsns-12-bio-page
 - User Story: As a user, I should see a bio page with content.
 - ACs
-  - [ ] Create a bio page using CMS elements
-  - [ ] Create any new section layouts as needed
-  - [ ] Update/add tests
+  - [x] Create a bio page using CMS elements
+  - [x] Create any new section layouts as needed
+  - [x] Update/add tests
 
 ---
 

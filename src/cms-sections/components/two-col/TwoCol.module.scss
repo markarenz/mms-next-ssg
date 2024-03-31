@@ -1,0 +1,61 @@
+@import '../../../styles/modulebase.scss';
+
+.root {
+  margin: 0;
+  padding: 2rem 0;
+
+  .columnWrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    @include for-tablet-landscape-up {
+      grid-template-columns: 2fr 1fr;
+    }
+    .columnText {
+      order: 1;
+      text-align: center;
+
+      @include for-tablet-landscape-up {
+        text-align: right;
+      }
+    }
+    .columnImage {
+      order: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        max-width: 400px;
+      }
+    }
+  }
+  &.align-right {
+    .columnWrap {
+      @include for-tablet-landscape-up {
+        grid-template-columns: 1fr 2fr;
+      }
+    }
+    .columnText {
+      order: 2;
+      @include for-tablet-landscape-up {
+        text-align: left;
+      }
+    }
+    .columnImage {
+      order: 1;
+    }
+  }
+
+  &.variant-default {
+    background-color: var(--color-gray-lightest);
+    color: var(--color-gray-darkest);
+  }
+  &.variant-dark {
+    background-color: var(--color-gray-darker);
+    color: var(--color-gray-lightest);
+  }
+  &.variant-primary {
+    background-color: var(--color-main-bg);
+    color: var(--color-gray-darkest);
+  }
+}
