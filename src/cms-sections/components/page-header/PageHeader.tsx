@@ -6,12 +6,14 @@ import { navMenuItems } from '@/common/menus/lib/menuData';
 import CmsImage from '@/common/components/CmsImage/CmsImage';
 import { delayClasses } from '@/common/lib/constants';
 import styles from './PageHeader.module.scss';
+import IconSearch from '@/common/components/Icons/IconSearch';
 
 type Props = {
   section: CmsSection;
 };
 const PageHeader: React.FC<Props> = ({ section }) => {
   const { headline, subhead, image1, slug } = section;
+  const searchType = section.searchType || null;
   const variant = section.variant || 'primary';
   const [isInitialized, setIsInitialized] = useState(false);
 
@@ -50,6 +52,15 @@ const PageHeader: React.FC<Props> = ({ section }) => {
               className={`anim-me anim-from-left ${isInitialized ? 'anim-in' : ''}`}
             >
               {headline}
+              {searchType && (
+                <div className={styles.searchIconWrap}>
+                  <div className={styles.bouncyButton}>
+                    <Link href={`/${searchType}/search`}>
+                      <IconSearch />
+                    </Link>
+                  </div>
+                </div>
+              )}
             </h1>
             <h2 className={`anim-me anim-from-right ${isInitialized ? 'anim-in' : ''}`}>
               {subhead}

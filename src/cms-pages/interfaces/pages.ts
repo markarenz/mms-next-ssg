@@ -16,6 +16,7 @@ export interface CmsSection {
   text1?: string;
   text2?: string;
   breadcrumbs?: BreadCrumbItem[];
+  searchType?: string;
 }
 
 export interface CmsPage {

@@ -37,6 +37,7 @@ const ProjectListPageContent: React.FC<Props> = ({
           image1: DEFAULT_IMAGES.PROJECTS,
           headline: 'Projects',
           variant: 'dark',
+          searchType: 'projects',
         }}
       />
       <main data-testid="page-projects" className={styles.root}>
