@@ -2,10 +2,12 @@ import React from 'react';
 import PageHeader from '@/cms-sections/components/page-header/PageHeader';
 import SkillIcons from '@/cms-sections/components/skill-icons/SkillIcons';
 import OneCol from '@/cms-sections/components/one-col/OneCol';
+import TwoCol from '@/cms-sections/components/two-col/TwoCol';
 import CtaOne from '@/cms-sections/components/cta-1/CtaOne';
 import TextBanner from '@/cms-sections/components/text-banner/TextBanner';
 import PostsList from '@/cms-sections/components/posts-list/PostsList';
 import ProjectsList from '@/cms-sections/components/projects-list/ProjectsList';
+import SeparatorSpikes from '@/cms-sections/components/separator-spikes/SeparatorSpikes';
 import { CmsSection } from '@/cms-pages/interfaces/pages';
 import { CmsPost } from '@/cms-posts/interfaces/posts';
 import { CmsProject } from '@/cms-projects/interfaces/projects';
@@ -23,6 +25,10 @@ const CmsPageSection: React.FC<Props> = ({ section, data }) => {
       return <PageHeader section={section} />;
     case 'one-col':
       return <OneCol section={section} />;
+    case 'two-col':
+      return <TwoCol section={section} />;
+    case 'separator-spikes':
+      return <SeparatorSpikes section={section} />;
     case 'cta-1':
       return <CtaOne section={section} />;
     case 'text-banner':

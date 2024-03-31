@@ -47,7 +47,7 @@ const SkillIcons: React.FC<Props> = ({ section }) => {
       <div className="container">
         <div className={styles.experience}>
           <div className={styles.yearsCol}>
-            <span>{yearsCount}</span>
+            <span data-testid="skills-years">{yearsCount}</span>
           </div>
           <div className={styles.textCol}>
             <div>

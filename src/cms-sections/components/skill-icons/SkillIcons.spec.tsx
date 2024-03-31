@@ -17,4 +17,17 @@ describe('SkillIcons', () => {
     const element = screen.getByTestId('skill-icons');
     expect(element).toBeInTheDocument();
   });
+  it('renders SkillIcons with content', async () => {
+    render(<SkillIcons section={mockSection} />);
+    jest.useFakeTimers();
+    jest.runAllTimers();
+    const element = screen.getByTestId('skill-icons');
+    expect(element).toBeInTheDocument();
+    const skills = mockSection.content?.split('\n').filter((skill) => skill !== '');
+    skills?.forEach((skill) => {
+      expect(screen.getByText(skill)).toBeInTheDocument();
+    });
+
+    expect(await screen.findByTestId('skills-years', {}, { timeout: 500 })).toHaveTextContent('2');
+  });
 });

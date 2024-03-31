@@ -11,7 +11,6 @@ const variants = ['default', 'dark'];
 
 const Button: React.FC<Props> = ({ label, onClick, testId, variant }) => {
   const variantClass = variant && variants.includes(variant) ? styles[variant] : styles.default;
-  console.log('variantClass', variantClass);
   return (
     <button
       data-testid={testId || 'button'}
