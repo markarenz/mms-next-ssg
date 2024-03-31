@@ -9,11 +9,14 @@ import PageHeader from '@/cms-sections/components/page-header/PageHeader';
 import IconClose from '@/common/components/Icons/IconClose';
 import CmsImage from '@/common/components/CmsImage/CmsImage';
 import IconImageNav from '@/common/components/Icons/IconImageNav';
+import { BreadCrumbItem } from '@/common/interfaces/app';
+import BreadCrumbs from '@/common/components/Breadcrumbs/Breadcrumbs';
 
 type Props = {
   project: CmsProject;
+  breadcrumbItems: BreadCrumbItem[];
 };
-const ProjectDetail: React.FC<Props> = ({ project }) => {
+const ProjectDetail: React.FC<Props> = ({ project, breadcrumbItems }) => {
   const [selectedImage, setSelectedImage] = useState(-1);
   if (!project || !project.slug || !project.content) {
     return null;
@@ -48,6 +51,9 @@ const ProjectDetail: React.FC<Props> = ({ project }) => {
       />
       <main data-testid="page-project-detail" className={styles.root}>
         <div className="container">
+          <div className={styles.breadcrumbWrap}>
+            <BreadCrumbs breadcrumbItems={breadcrumbItems} variant="dark" />
+          </div>
           <div className={styles.gridContainer}>
             <div className={styles.mainContent}>
               <div className={styles.contentWrap}>

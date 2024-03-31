@@ -5,11 +5,15 @@ import ButtonLink from '@/common/components/ButtonLink/ButtonLink';
 import Footer from '@/common/components/Footer/Footer';
 import styles from './PostDetail.module.scss';
 import PageHeader from '@/cms-sections/components/page-header/PageHeader';
+import { BreadCrumbItem } from '@/common/interfaces/app';
+import BreadCrumbs from '@/common/components/Breadcrumbs/Breadcrumbs';
 
 type Props = {
   post: CmsPost;
+  breadcrumbItems: BreadCrumbItem[];
 };
-const PostDetail: React.FC<Props> = ({ post }) => {
+
+const PostDetail: React.FC<Props> = ({ post, breadcrumbItems }) => {
   if (!post || !post.slug || !post.content) {
     return null;
   }
@@ -27,6 +31,9 @@ const PostDetail: React.FC<Props> = ({ post }) => {
       />
       <main data-testid="page-post-detail" className={styles.root}>
         <div className="container">
+          <div className={styles.breadcrumbWrap}>
+            <BreadCrumbs breadcrumbItems={breadcrumbItems} variant="dark" />
+          </div>
           <div className={styles.mainContent}>
             <MarkdownContent content={post.content} />
           </div>

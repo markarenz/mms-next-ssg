@@ -4,6 +4,7 @@ import { getPosts } from '@/cms-posts/lib/post-utils';
 import PostListPageContent from '@/cms-posts/components/PostListPageContent/PostListPageContent';
 import { CONTENT_TYPES, DEFAULT_IMAGES } from '@/common/lib/constants';
 import { getGenericMetadata } from '@/cms-pages/lib/page-utils';
+import { BreadCrumbItem } from '@/common/interfaces/app';
 
 export async function generateMetadata({
   params,
@@ -22,8 +23,20 @@ export default function PostsArchivePage({ params }: { params: { pageNum: string
   const pageNum = parseFloat(`${params?.pageNum}`);
   const posts = getPosts(pageNum);
   const maxPages = getMaxContentPagesByType(CONTENT_TYPES.POSTS);
+  const breadcrumbItems: BreadCrumbItem[] = [
+    { name: 'Home', path: '/' },
+    { name: 'Projects', path: '/projects' },
+    { name: `Archive Page ${pageNum} of ${maxPages}`, path: `/projects/archive/${pageNum}/` },
+  ];
 
-  return <PostListPageContent posts={posts} pageNum={pageNum} maxPages={maxPages} />;
+  return (
+    <PostListPageContent
+      posts={posts}
+      pageNum={pageNum}
+      maxPages={maxPages}
+      breadcrumbItems={breadcrumbItems}
+    />
+  );
 }
 
 export async function generateStaticParams() {

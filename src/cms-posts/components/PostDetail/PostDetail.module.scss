@@ -1,6 +1,9 @@
 .root {
   background-color: var(--color-gray-lightest);
   padding: 2rem 0;
+  .breadcrumbWrap {
+    margin-bottom: 2rem;
+  }
   .mainContent {
     margin-bottom: 2rem;
   }

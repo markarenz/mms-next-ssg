@@ -1,5 +1,6 @@
 import React from 'react';
 import { CmsProject } from '@/cms-projects/interfaces/projects';
+import { BreadCrumbItem } from '@/common/interfaces/app';
 import PageHeader from '@/cms-sections/components/page-header/PageHeader';
 import ButtonLink from '@/common/components/ButtonLink/ButtonLink';
 import ContentListItem from '@/common/components/ContentListItem/ContentListItem';
@@ -8,14 +9,21 @@ import Footer from '@/common/components/Footer/Footer';
 import { CONTENT_TYPES, DEFAULT_IMAGES } from '@/common/lib/constants';
 import Pagination from '@/common/components/Pagination/Pagination';
 import styles from './ProjectListPageContent.module.scss';
+import BreadCrumbs from '@/common/components/Breadcrumbs/Breadcrumbs';
 
 type Props = {
   projects: CmsProject[];
   pageNum: number;
   maxPages: number;
+  breadcrumbItems: BreadCrumbItem[];
 };
 
-const ProjectListPageContent: React.FC<Props> = ({ projects, pageNum, maxPages }) => {
+const ProjectListPageContent: React.FC<Props> = ({
+  projects,
+  pageNum,
+  maxPages,
+  breadcrumbItems,
+}) => {
   if (!projects || projects.length === 0 || !maxPages) {
     return null;
   }
@@ -33,6 +41,9 @@ const ProjectListPageContent: React.FC<Props> = ({ projects, pageNum, maxPages }
       />
       <main data-testid="page-projects" className={styles.root}>
         <div className="container">
+          <div className={styles.breadcrumbWrap}>
+            <BreadCrumbs breadcrumbItems={breadcrumbItems} variant="light" />
+          </div>
           <div className="itemsWrap">
             {projects.map((project) => (
               <ContentListItem key={project.slug} summary={mapSummaryFromProject(project)} />

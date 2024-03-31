@@ -1,6 +1,9 @@
 .root {
   background-color: var(--color-gray-dark);
-  padding: 4rem 0 3rem 0;
+  padding: 2rem 0 3rem 0;
+  .breadcrumbWrap {
+    margin-bottom: 2rem;
+  }
   .actionRow {
     display: flex;
     justify-content: center;
