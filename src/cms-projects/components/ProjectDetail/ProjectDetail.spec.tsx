@@ -2,15 +2,21 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import ProjectDetail from './ProjectDetail';
 import { mockProject } from '@/cms-projects/lib/mocks/mockProject';
 
+const mockBreadcrumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Projects', path: '/projects' },
+  { name: 'Project Title', path: '/projects/project-title' },
+];
+
 describe('PostDetail', () => {
   it('renders component', () => {
-    render(<ProjectDetail project={mockProject} />);
+    render(<ProjectDetail project={mockProject} breadcrumbItems={mockBreadcrumbs} />);
     const element = screen.getByTestId('page-project-detail');
     expect(element).toBeInTheDocument();
   });
 
   it('handles lightbox open, navigation and close', () => {
-    render(<ProjectDetail project={mockProject} />);
+    render(<ProjectDetail project={mockProject} breadcrumbItems={mockBreadcrumbs} />);
     const image0 = screen.getByTestId('image-link-0');
     fireEvent.click(image0);
     // should open lightbox
@@ -44,7 +50,12 @@ describe('PostDetail', () => {
 
   it('returns null when required fields are not present', () => {
     //@ts-ignore
-    render(<ProjectDetail project={{ ...mockProject, content: null }} />);
+    render(
+      <ProjectDetail
+        project={{ ...mockProject, content: null }}
+        breadcrumbItems={mockBreadcrumbs}
+      />,
+    );
     const element = screen.queryByTestId('page-project-detail');
     expect(element).not.toBeInTheDocument();
   });

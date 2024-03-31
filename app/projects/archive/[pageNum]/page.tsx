@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { BreadCrumbItem } from '@/common/interfaces/app';
 import { getMaxContentPagesByType } from '@/common/lib/common-utils/common-utils';
 import { getProjects } from '@/cms-projects/lib/project-utils';
 import ProjectListPageContent from '@/cms-projects/components/ProjectListPageContent/ProjectListPageContent';
@@ -22,8 +23,20 @@ export default function ProjectsArchivePage({ params }: { params: { pageNum: str
   const pageNum = parseFloat(`${params?.pageNum}`);
   const projects = getProjects(pageNum);
   const maxPages = getMaxContentPagesByType(CONTENT_TYPES.PROJECTS);
+  const breadcrumbItems: BreadCrumbItem[] = [
+    { name: 'Home', path: '/' },
+    { name: 'Projects', path: '/projects' },
+    { name: `Archive Page ${pageNum} of ${maxPages}`, path: `/projects/archive/${pageNum}/` },
+  ];
 
-  return <ProjectListPageContent projects={projects} pageNum={pageNum} maxPages={maxPages} />;
+  return (
+    <ProjectListPageContent
+      projects={projects}
+      pageNum={pageNum}
+      maxPages={maxPages}
+      breadcrumbItems={breadcrumbItems}
+    />
+  );
 }
 
 export async function generateStaticParams() {

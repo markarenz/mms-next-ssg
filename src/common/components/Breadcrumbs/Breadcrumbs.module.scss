@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .separator {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+  &.light {
+    .current,
+    .separator,
+    a {
+      color: var(--color-gray-lightest);
+    }
+  }
+  &.dark {
+    .current,
+    .separator,
+    a {
+      color: var(--color-gray-darkest);
+    }
+  }
+}

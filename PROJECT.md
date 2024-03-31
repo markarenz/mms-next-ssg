@@ -135,20 +135,31 @@
 
 ---
 
-## [ ] MMS-11 Breadcrumbs
+## [x] MMS-11 Breadcrumbs
 
-- Branch: feat/mmsns-11-dynamic-routing-and-404
+- Branch: feat/mmsns-11-breadcrumbs
 - User Story: As a user, I should navigable breadcrumbs on every page.
 - ACs
-  - [ ] Create a breadcrumb component
-  - [ ] Add breadcrumbs to all pages
+  - [x] Create a breadcrumb component
+  - [x] Add breadcrumbs to all sub-pages
+  - [x] Update/add tests
+
+---
+
+## [ ] MMS-12 Bio Page
+
+- Branch: feat/mmsns-12-dynamic-routing-and-404
+- User Story: As a user, I should see a bio page with content.
+- ACs
+  - [ ] Create a bio page using CMS elements
+  - [ ] Create any new section layouts as needed
   - [ ] Update/add tests
 
 ---
 
-## [ ] MMS-12 Dynamic Routing and 404
+## [ ] MMS-13 Dynamic Routing and 404
 
-- Branch: feat/mmsns-12-dynamic-routing-and-404
+- Branch: feat/mmsns-13-dynamic-routing-and-404
 - User Story: As a user, I should see a custom 404 page when I enter an unused URL on the site. As an editor, I should be able to create a page on the site without having to add a page to the `/app` directory.
 - ACs
   - [ ] Create a catch-all page for dynamic routing and return 404 content when the page slug is not valid.
@@ -158,14 +169,22 @@
 
 ---
 
-## [ ] MMS-13 Search Feature
+## [ ] MMS-14 Search Feature
 
-- Branch: feat/mmsns-13-static-search
+- Branch: feat/mmsns-14-static-search
 - User Story: As a user, I should have the ability to search all content types.
 - [ ] Write functions that create an index of words (3 letters or longer) as they appear in each item by content type.
 - [ ] Create a search page that uses the data created at build time to search through all pages live.
 
 ---
+
+## [ ] MMS-15 Content Pass
+
+- Branch: feat/mmsns-15-content-pass
+- User Story: As a user, I see new projects and properly formatted images & SEO content.
+- [ ] Create new project elements
+- [ ] Go through all images used
+- [ ] Go through all metas & titles
 
 ## [ ] MMS-X SEO Elements
 

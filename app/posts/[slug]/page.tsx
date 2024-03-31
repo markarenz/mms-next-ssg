@@ -4,6 +4,7 @@ import { getPostDetail } from '@/cms-posts/lib/post-utils';
 import { CONTENT_TYPES } from '@/common/lib/constants';
 import { getPostMetadata } from '@/cms-posts/lib/post-utils';
 import PostDetail from '@/cms-posts/components/PostDetail/PostDetail';
+import { BreadCrumbItem } from '@/common/interfaces/app';
 
 export async function generateMetadata({
   params,
@@ -17,7 +18,13 @@ export async function generateMetadata({
 export default function PostDetailPage({ params }: { params: { slug: string } }) {
   const slug = params?.slug;
   const post = getPostDetail(slug, true);
-  return <PostDetail post={post} />;
+  const breadcrumbItems: BreadCrumbItem[] = [
+    { name: 'Home', path: '/' },
+    { name: 'Posts', path: '/posts' },
+    { name: post.title, path: `/posts/${slug}/` },
+  ];
+
+  return <PostDetail post={post} breadcrumbItems={breadcrumbItems} />;
 }
 
 export async function generateStaticParams() {
