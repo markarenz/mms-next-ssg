@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { getImageCdnUrl } from './image-utils/image-utils';
 import { ContentRoute } from '@/common/interfaces/app';
 
 export const itemsPerPage = 12;
@@ -46,7 +45,7 @@ export const DEFAULT_IMAGES = Object.freeze({
   PROJECTS: '/pages/mms-page-headers-02.jpg',
 });
 
-const defaultImg = getImageCdnUrl('/mms-default.jpg');
+const defaultImg = `${imageCdnBaseUrl}tr:f-webp,q-75/pages/mms-logo-512.png`;
 
 export const DEFAULT_METADATA: Metadata = Object.freeze({
   title: 'Mark Arenz - Mark Makes Stuff',
