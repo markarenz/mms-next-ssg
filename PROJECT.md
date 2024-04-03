@@ -179,14 +179,28 @@
 
 ---
 
-## [ ] MMS-15 Content Pass
+## [x] MMS-15 XML Sitemap Generation
 
-- Branch: feat/mmsns-15-content-pass
+- Branch: feat/mmsns-15-xml-sitemap
+- [x] Create sitemap XML generator
+- [x] Trigger sitemap generator via npm
+- [x] Update/add tests
+
+---
+
+## [ ] MMS-16 Content Pass
+
+- Branch: feat/mmsns-16-content-pass
 - User Story: As a user, I see new projects and properly formatted images & SEO content.
+- [ ] Fix: Truncate breadcrumbs ellipses for mobile
+- [ ] Browser console errors
 - [ ] Create new project elements
 - [ ] Go through all images used
 - [ ] Go through all metas & titles
-
-## [ ] MMS-X SEO Elements
-
-- [ ] sitemap XML generator
+- [ ] Add New Projects:
+  - [ ] Spice Hustle
+  - [ ] MarkMakesStuff v4 NextJS SSG
+  - [ ] Swatchity.com
+  - [ ] FlurbCo?
+- [ ] Accessibility checks
+- [ ] Test updates
