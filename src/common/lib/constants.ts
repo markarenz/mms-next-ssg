@@ -42,7 +42,7 @@ export const delayClasses = [
 export const DEFAULT_IMAGES = Object.freeze({
   MAIN: '/mms-default.jpg',
   POSTS: '/pages/mms-page-headers-02.jpg',
-  PROJECTS: '/pages/mms-page-headers-02.jpg',
+  PROJECTS: '/pages/mms-page-headers-work.jpg',
 });
 
 const defaultImg = `${imageCdnBaseUrl}tr:f-webp,q-75/pages/mms-logo-512.png`;

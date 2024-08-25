@@ -8,6 +8,12 @@
       text-decoration: underline;
     }
   }
+  span {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
   .separator {
     display: inline-block;
     margin: 0 0.5rem;
@@ -23,7 +29,7 @@
     .current,
     .separator,
     a {
-      color: var(--color-gray-darkest);
+      color: #000;
     }
   }
 }

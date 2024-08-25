@@ -55,7 +55,7 @@ const PageHeader: React.FC<Props> = ({ section }) => {
               {searchType && (
                 <div className={styles.searchIconWrap}>
                   <div className={styles.bouncyButton}>
-                    <Link href={`/${searchType}/search`}>
+                    <Link href={`/${searchType}/search`} aria-label={`Search ${searchType}`}>
                       <IconSearch />
                     </Link>
                   </div>

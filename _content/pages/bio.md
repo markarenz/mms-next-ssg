@@ -1,7 +1,7 @@
 ---
 title: Mark Arenz Bio
 datePublished: 2024-04-02
-image: default-image.jpg
+image: pages/mms-page-headers-bio.jpg
 metaDescription: A developer. A creative. A team lead. I've been making stuff with logic for over 30 years.
 header: header-bio
 sections:
