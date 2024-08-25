@@ -192,15 +192,12 @@
 
 - Branch: feat/mmsns-16-content-pass
 - User Story: As a user, I see new projects and properly formatted images & SEO content.
-- [ ] Fix: Truncate breadcrumbs ellipses for mobile
-- [ ] Browser console errors
-- [ ] Create new project elements
-- [ ] Go through all images used
-- [ ] Go through all metas & titles
-- [ ] Add New Projects:
-  - [ ] Spice Hustle
-  - [ ] MarkMakesStuff v4 NextJS SSG
-  - [ ] Swatchity.com
-  - [ ] FlurbCo?
-- [ ] Accessibility checks
-- [ ] Test updates
+- [x] Fix: Truncate breadcrumbs ellipses for mobile
+- [x] Go through all images used
+- [x] Go through all metas & titles
+- [x] Add New Projects:
+  - [x] Spice Hustle
+  - [x] Swatchity.com
+  - [x] FlurbCo
+- [x] Accessibility checks
+- [x] Test updates

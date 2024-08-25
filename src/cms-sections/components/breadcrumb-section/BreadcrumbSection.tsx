@@ -19,7 +19,7 @@ const BreadcrumbSection: React.FC<Props> = ({ section }) => {
     dark: styles.dark,
   };
   const textVariants: any = {
-    primary: 'light',
+    primary: 'dark',
     default: 'dark',
     dark: 'light',
   };

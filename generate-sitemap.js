@@ -65,7 +65,7 @@ ${sitemapItems
     (item) => `
   <url>
       <loc>${item.loc}</loc>
-      <lastmod>${item.lastMod}</lastMod>
+      <lastmod>${item.lastMod}</lastmod>
   </url>`,
   )
   .join('')}
