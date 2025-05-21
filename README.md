@@ -43,3 +43,4 @@ Create an SSL cert for your domain, and use it in a CloudFront distribution that
 
 - Images for these content types should be 1920 x 700
 - The image CDN will provide the thumbnail images on the fly
+  - https://imagekit.io/login/
