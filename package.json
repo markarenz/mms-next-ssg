@@ -16,6 +16,7 @@
     "build:deploy": "npm run build && npm run deploy"
   },
   "dependencies": {
+    "@next/third-parties": "^16.3.0-preview.0",
     "gray-matter": "^4.0.3",
     "isomorphic-dompurify": "^2.4.0",
     "jsdom": "^24.0.0",

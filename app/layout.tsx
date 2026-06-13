@@ -1,4 +1,5 @@
 import React from 'react';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { Raleway, Roboto_Slab } from 'next/font/google';
 import Nav from '@/common/components/Nav/Nav';
@@ -37,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <GoogleAnalytics gaId="G-C6R0SX99D7" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${raleway.variable} ${robotoSlab.variable}`}>
